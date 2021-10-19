@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.page {
+  height: 1123px;
+  width: 794px;
+  margin: auto;
+}
+header {
+  height: 230px;
+  width: 100%;
+  background: lightblue;
+  display: flex;
+  justify-content: space-around;
+}
+.img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 15px;
+  margin-left: 30px;
+}
+.name {
+  margin: auto;
+  color: white;
+  letter-spacing: 3px;
+}
+.himanshu {
+  margin: auto;
+  color: white;
+  letter-spacing: 3px;
+  font-size: 2rem;
+}
+.name h3 {
+  font-weight: 450;
+  margin-top: 10px;
+}
+.upperpost {
+  font-weight: 450;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  margin: auto;
+  color: white;
+  letter-spacing: 3px;
+}
+.plusbtn {
+  display: inline;
+  padding: 4px;
+  border-radius: 20%;
+  background: turquoise;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+.first {
+  width: 90%;
+  margin: 30px;
+}
+.second {
+  background: rgba(128, 128, 128, 0.137);
+  padding: 30px;
+}
+.heading {
+  color: grey;
+  font-weight: 550;
+  letter-spacing: 4px;
+  margin-top: 30px;
+}
+.underline {
+  height: 5px;
+  width: 60px;
+  background: grey;
+  margin: 10px 0;
+}
+p {
+  color: rgba(0, 0, 0, 0.582);
+  margin-bottom: 10px;
+}
+.linkedin a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.582);
+}
+ul {
+  margin: 20px;
+  color: rgba(0, 0, 0, 0.507);
+}
+h2 {
+  font-weight: 450;
+}
+.h2 {
+  font-weight: 450;
+  font-size: 1.3rem;
+}
+.post {
+  color: rgba(0, 0, 0, 0.658);
+  font-size: 1rem;
+}
+.btnli {
+  padding: 2px 7px;
+  border-radius: 50%;
+  background: gray;
+  text-decoration: none;
+}
+.btndiv {
+  padding: 2px 7px;
+  border-radius: 50%;
+  background: gray;
+  text-decoration: none;
+}
+.btnskill {
+  padding: 2px 7px;
+  border-radius: 50%;
+  background: gray;
+  text-decoration: none;
+}
+.privew {
+  color: black;
+  padding: 5px;
+  background: blueviolet;
+  text-decoration: none;
+  margin: auto;
+}
