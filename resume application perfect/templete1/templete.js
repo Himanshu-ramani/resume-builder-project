@@ -13,6 +13,12 @@ btnskill.addEventListener("click", function (e) {
   e.preventDefault();
   let newskill = `<li class=''><input type="text" name="" id="" placeholder="skill"></li>`;
   skilli.insertAdjacentHTML("beforeend", newskill);
+  document
+    .getElementById("skill-cont")
+    .insertAdjacentElement(
+      "beforeend",
+      `<li class='edit' id="skill-temp" >Exceptional commounnication and networking skills</li>`
+    );
   // console.log(, skilli);
   console.log("btnskill");
 });
@@ -39,7 +45,8 @@ btnli.addEventListener("click", function (e) {
     "beforeend",
     ` <li class=''><input type="text" name="" id="" placeholder="work expeince"></li>`
   );
-  console.log("btnli");
+
+  // console.log("btnli");
 });
 ///
 btnedu.addEventListener("click", function (e) {
@@ -111,4 +118,12 @@ previewBtn.addEventListener("click", function (e) {
     document.getElementById("experince-form").value;
   //
   document.getElementById("form").style.display = "none";
+  document.getElementById("page").style.display = "block";
+  document.querySelector(".pdf").style.display = "block";
+});
+
+//pdf-btn
+document.getElementById("pdf-btn").addEventListener("click", function () {
+  document.getElementById("pdf-btn").style.display = "none";
+  window.print();
 });

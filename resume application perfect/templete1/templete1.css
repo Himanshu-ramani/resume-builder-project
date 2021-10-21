@@ -9,16 +9,23 @@
   border: none;
   outline: none;
 }
-.form,
-.page {
+.form {
   /* height: 1123px; */
   width: 794px;
   margin: auto;
 }
+.pdf {
+  display: none;
+}
+.page {
+  width: 794px;
+  margin: auto;
+  display: none;
+}
 header {
   height: 230px;
   width: 100%;
-  background: lightblue;
+  background-image: url("./blue\ background.jpg");
   display: flex;
   justify-content: space-around;
 }
@@ -29,6 +36,9 @@ header {
   border-radius: 50%;
   margin: 15px;
   margin-left: 30px;
+}
+.img::before {
+  content: "add here";
 }
 .name {
   margin: auto;
