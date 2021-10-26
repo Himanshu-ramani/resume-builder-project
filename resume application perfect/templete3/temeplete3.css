@@ -9,9 +9,9 @@
   border: none;
   outline: none;
 }
-/* #page {
+#page {
   display: none;
-} */
+}
 .page {
   /* height: 1123px; */
   width: 794px;
@@ -28,7 +28,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
-.profile {
+.img {
   height: 200px;
   width: 200px;
   object-fit: cover;
@@ -53,7 +53,7 @@ header {
 .phone {
   margin: 5px;
 }
-.profile {
+.img {
   margin: 20px 20px 0 30px;
 }
 .bigname {
@@ -63,7 +63,7 @@ header {
 }
 .experince,
 .eduction {
-  margin: 10px;
+  margin: 5px 10px;
   padding: 10px;
 }
 ul {
@@ -93,17 +93,41 @@ ul {
 }
 /* from css */
 .form {
-  height: 1123px;
+  /* height: 1123px; */
   width: 794px;
   margin: auto;
 }
 /* btn */
-.btn {
-  display: flex;
-  justify-content: center;
-}
+
 footer {
   margin-top: 10px;
   height: 30px;
   background-color: cadetblue;
+}
+.btn-desgin {
+  padding: 3px 7px;
+  background: grey;
+  border-radius: 50%;
+}
+.file {
+  display: none;
+}
+.btn-preview {
+  text-decoration: none;
+  color: grey;
+  padding: 5px 10px;
+  background-color: rgba(137, 43, 226, 0.438);
+  /* margin: 300px 0; */
+  border-radius: 4px;
+}
+.preview {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 50px 0;
+}
+#back-btn {
+  display: none;
+}
+#pdf {
+  display: none;
 }

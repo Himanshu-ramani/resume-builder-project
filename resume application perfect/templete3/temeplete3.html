@@ -10,10 +10,10 @@
   <body>
     <div class="form" id="form">
       <header>
-        <div id="profile-btn">
-          <!-- <input type="file" name="" id="img-file" /> -->
-          <img class="profile" src="../profile.png" alt="" srcset="" />
-        </div>
+        <label for="filefeild">
+          <img class="img" src="../profile.jpg" alt="" srcset="" id="img-f"
+        /></label>
+        <input type="file" name="" id="filefeild" class="file" />
         <p class="">
           <input
             type="text"
@@ -56,10 +56,10 @@
           </div>
         </section>
         <section class="two">
-          <a class="add-" href="#">+</a>
           <div class="heading">EXPERINCE</div>
-          <div class="experince">
-            <p class="company">
+          <div class="experince" id="exp-container-form">
+            <button class="btn-desgin" id="exp-btn">+</button>
+            <p class="exp-array">
               <input
                 type="text"
                 name=""
@@ -72,19 +72,14 @@
             </p>
             <ul>
               <li>
-                <input
-                  type="text"
-                  placeholder="work Exprince"
-                  name=""
-                  id="expreince-work-form"
-                />
+               <textarea name="" id="expreince-work-form" cols="30" rows="3" placeholder="Work Experience"></textarea>
               </li>
             </ul>
           </div>
-          <a class="add-eduction" href="#">+</a>
           <div class="heading">EDUCATION</div>
-          <div class="eduction">
-            <p class="company">
+          <div class="eduction" id="study-container">
+            <button class="btn-desgin" id="study-btn">+</button>
+            <p class="edu">
               <input
                 type="text"
                 name=""
@@ -97,30 +92,32 @@
                 type="text"
                 name=""
                 id="course-form"
-                placeholder="course"
-              />
+                placeholder="course" />
             </p>
             <ul>
               <li>
-                <input
-                  type="text"
-                  placeholder="about course"
-                  id="course-info-form"
-                />
+               <textarea name="" id="course-info-form" cols="30" rows="3" placeholder="study"></textarea>
               </li>
             </ul>
           </div>
         </section>
-        <footer></footer>
       </div>
+      <footer></footer>
 
-      <div class="btn">
-        <a class="btn-preview" href="#"> preview</a>
+      <div class="preview">
+        <button class="btn-preview" id="btn-form"> Preview</button>
+      </div>
       </div>
     </div>
     <div class="page" id="page">
       <header>
-        <img class="profile" src="../profile.png" alt="" srcset="" />
+        <img
+          class="img"
+          src="../profile.png"
+          alt=""
+          srcset=""
+          id="form-profile"
+        />
         <p class="bigname" id="name-temp">HIMANSHU RAMANI</p>
       </header>
       <div class="info">
@@ -140,7 +137,7 @@
         </section>
         <section class="two">
           <div class="heading">EXPERINCE</div>
-          <div class="experince">
+          <div class="experince" id="exp-container-temp">
             <p class="company" id="company-temp">RAMANI INDUSTRIES</p>
             <p class="post" id="post-temp">full stack Developer</p>
             <ul>
@@ -150,7 +147,7 @@
             </ul>
           </div>
           <div class="heading">EDUCATION</div>
-          <div class="eduction">
+          <div class="eduction" id="study-container-temp">
             <p class="company" id="university-temp">RAMANI INDUSTRIES</p>
             <p class="post" id="course-temp">full stack Developer</p>
             <ul>
@@ -163,9 +160,9 @@
       </div>
       <footer></footer>
     </div>
-    <div class="btn">
-      <a class="btn-pdf" id="pdf" href="#"> preview</a>
-    </div>
-    <script src="./temeplete3.js"></script>
+    <div class="preview">
+      <button class="btn-preview" id="back-btn"> Back</button>
+      <button class="btn-preview" id="pdf"> Save</button>
+    </div>    <script src="./temeplete3.js"></script>
   </body>
 </html>

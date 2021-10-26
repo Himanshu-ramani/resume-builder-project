@@ -8,16 +8,18 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="from">
+    <div class="from" id="form">
       <header>
-        <img id="form-profile" class="from-dp" src="../profile.png" alt="" />
-        <div class="name">
-          <p class="bigname" id="from-big-name">
-            <input type="text" id="input-bigname" placeholder="YOUR NAME" />
+      <label for="filefeild">  <img class="img from-dp" src="../profile.jpg" alt="" srcset="" id="img-f" /></label>
+      <input type="file" name="" id="filefeild" class="file">
+      <div class="name">
+          <p class="" id="from-big-name">
+            <input type="text" id="input-bigname" class="bigname" placeholder="YOUR NAME" />
           </p>
           <p>
             <input
               type="text"
+              class="post"
               name=""
               id="input-profession"
               placeholder="PROFESSION"
@@ -28,18 +30,20 @@
       <div class="info">
         <section class="one">
           <p class="heading">WORK EXPERINCE</p>
-          <div class="experince">
-            <span class="date"
+          <div class="experince" id="experince-container">
+            <button class="btnedu" id="experince-btn">+</button>
+            <span class="array"
               ><input
                 type="text"
                 name=""
-                id="input-date"
+                id="date-form"
                 placeholder="mm/yy/ - mm/yy "
               /> </span
             ><span class="comapny"
               ><input
                 type="text"
                 name=""
+                class=""
                 id="form-Company"
                 placeholder="Company"
             /></span>
@@ -51,61 +55,65 @@
                 placeholder="Profession"
               />
             </p>
-            <ul>
+          
+            <ul class="exp-ul" id="exp-ul">
               <li class="li">
-                <input type="text" name="" id="" placeholder="Experince" />
+               <textarea name="" id="work-exp-form" cols="30" rows="2" placeholder="Work exprince"></textarea>
               </li>
             </ul>
           </div>
           <p class="heading">CONTACT</p>
           <div class="contact">
-            <div><input type="text" placeholder="Address" /></div>
-            <div><input type="text" placeholder="Phone" /></div>
-            <div><input type="text" placeholder="E-mail" /></div>
+            <div><input type="text" id="address-form" placeholder="Address" /></div>
+            <div><input type="text" id="phone-form" placeholder="Phone" /></div>
+            <div><input type="text" id="email-form" placeholder="E-mail" /></div>
           </div>
         </section>
         <section class="two">
           <p class="heading">EDUCATION</p>
-          <div class="eduction">
-            <span class="date"
+          <button class="btnedu" id="study-btn">+</button>
+          <div class="eduction" id="eduction">
+            <span class="date-study date"
               ><input
                 type="text"
                 name=""
-                id="input-date"
+                id="study-date-form"
                 placeholder="mm/yy/-mm/yy" /></span
-            ><span class="comapny"
-              ><input type="text" name="" id="" placeholder="University"
+            ><span class="studyarray"
+              ><input type="text" name="" id="university-form" placeholder="University"
             /></span>
-            <p class="experince-profession">
+            <p class="">
               <input
                 type="text"
                 name=""
-                id="form-profession"
+                id="course-form"
                 placeholder="Degree"
               />
             </p>
-            <ul class="exp-ul">
+            <ul class="StudyUl">
               <li>
-                <input type="text" name="" id="" placeholder="Study" />
+                <textarea name="" id="study-work-form" cols="30" rows="2" placeholder="Study"></textarea>
               </li>
             </ul>
           </div>
           <p class="heading">SKILLS & EXPERTISE</p>
           <div class="skills">
-            <ul>
+            <button class="btnedu" id="skill-btn">+</button>
+            <ul id="skill-container">
               <li>
-                <input type="text" name="" id="" placeholder="Skills" />
+                <input type="text" name="" id="skillarray" class="skill"
+                placeholder="Skills" />
               </li>
             </ul>
           </div>
           <p class="heading">REFERENCE</p>
           <div class="refrence">
             <p class="refrence-name">
-              <input type="text" name="" id="" placeholder="Refrence Name" />
+              <input type="text" name="" id="refrence-name-form" placeholder="Refrence Name" />
             </p>
             <textarea
               name=""
-              id=""
+              id="refrence-detail-form"
               cols="30"
               rows="2"
               placeholder="Refrence Detail"
@@ -114,18 +122,18 @@
         </section>
       </div>
     </div>
-    <div class="btn-preview">
-      <a class="btn-p" href="#">view preview</a>
+    <div class="preview">
+    
+      <button class="btn-preview" id="btn-form"> Preview</button>
     </div>
-
-    <div class="page">
+    <div class="page" id="page">
       <header>
         <img id="form-profile" class="from-dp" src="../profile.png" alt="" />
         <div class="name">
-          <p class="bigname" id="from-big-name">
+          <p class="bigname" id="temp-big-name">
             HIMANSHU RAMANI
           </p>
-          <p>
+          <p class="post" id="post-temp">
            WEB devloper
           </p>
         </div>
@@ -133,45 +141,45 @@
       <div class="info">
         <section class="one">
           <p class="heading">WORK EXPERINCE</p>
-          <div class="experince">
-            <span class="date"
+          <div class="experince" id="temp-exp">
+            <span class="date" id="date-temp"
               >2020-2021 </span
-            ><span class="comapny"
+            ><span class="comapny" id="temp-company"
               >Design Clock Inc</span>
-            <p class="experince-profession">
+            <p class="experince-profession" id="experince-post">
               full stack web devloper
             </p>
             <ul>
-              <li class="li">
+              <li class="li" id="work-exp-temp">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, placeat!
             </ul>
           </div>
           <p class="heading">CONTACT</p>
           <div class="contact">
-            <div>MUMBAI ,INDIA</div>
-            <div>9998060495</div>
-            <div>himanshuramani@gamil.com</div>
+            <div id="address-temp">MUMBAI ,INDIA</div>
+            <div id="phone-temp">9998060495</div>
+            <div id="email-temp">himanshuramani@gamil.com</div>
           </div>
         </section>
         <section class="two">
           <p class="heading">EDUCATION</p>
-          <div class="eduction">
-            <span class="date"
+          <div class="eduction" id="study-container-temp">
+            <span class="date" id="study-date-temp"
               >2014-2020</span
-            ><span class="comapny"
-              >University</span>
-            <p class="experince-profession">
+            ><span class="comapny" id="university-temp"
+              > University</span>
+            <p class="experince-profession" id="course-temp">
               BCA
             </p>
             <ul class="exp-ul">
-              <li>
+              <li id="study-work-temp">
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, expedita.
               </li>
             </ul>
           </div>
           <p class="heading">SKILLS & EXPERTISE</p>
           <div class="skills">
-            <ul>
+            <ul id="skill-li">
               <li>
                Lorem ipsum dolor sit amet consectetur.
               </li>
@@ -179,14 +187,18 @@
           </div>
           <p class="heading">REFERENCE</p>
           <div class="refrence">
-            <p class="refrence-name">
+            <p class="refrence-name" id="refrence-name-temp">
               Parth
             </p>
-            Lorem ipsum dolor sit amet.
+           <p id="refrence-detail-temp"> Lorem ipsum dolor sit amet.</p>
           </div>
         </section>
       </div>
     </div>
+    </div>
+    <div class="preview">
+      <button class="btn-preview" id="btn-back"> Back</button>
+      <button class="btn-preview" id="btn-save"> Save</button>
     </div>
     <script src="./templete2.js"></script>
   </body>

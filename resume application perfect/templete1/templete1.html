@@ -10,7 +10,11 @@
   <body>
     <div class="form" id="form">
       <header>
-        <img class="img" src="../profile.png" alt="" srcset="" />
+        <div class="imgdiv">
+      <label for="filefeild">  <img class="img" src="../profile.jpg" alt="" srcset="" id="img-f" /></label>
+      <input type="file" name="" id="filefeild" class="file">
+      <!-- <p class="text">Add here</p> -->
+      </div>
         <div class="name">
           <h1 class='himanshu'> <input type="text" name="" id="bigname-form" class="himanshu" placeholder="Name"> </h1>
           <h3 class=''><input type="text" name="" class="upperpost" id="post-form" placeholder="apply for the post"></h3>
@@ -45,16 +49,15 @@
           <div class="eduction">
             <h1 class="heading">EDUCATION</h1>
             <div class="underline"></div>
-            <a href="#" class="btnedu">+</a>
+            <button class="btnedu" id="education-btn">+</button>
            <div class="educontainer">
-            <p class=''>
+           
             
-              &nbsp;&nbsp;<input type="text" placeholder="your collage" id="collage-form">
+            <input type="text" placeholder="your collage" class="collages" id="collage-form">
       
-            </p>
-            <p>
-              &nbsp;&nbsp;<input type="text" placeholder="Your degree" id="degree-form">
-            </p>
+           
+            <input type="text" placeholder="Your degree" class="collages" id="collage-form">
+           
           </div>
            </div>
         </section>
@@ -62,9 +65,10 @@
           <div class="skill">
             <h1 class="heading">SKILLS</h1>
             <div class="underline"></div>
-            <a class="btnskill"href="#">+</a>
-            <ul>
-             <li class='skillli'><input type="text" name="" id="skill-form" placeholder="skill"></li>
+            <button class="btnskill add-skill-btn">+</button> 
+            <!-- <button class="btnskill sub-skill-btn">-</button> -->
+            <ul id="skill-container">
+             <li><input type="text" name="" id="skill-form" class="lp" placeholder="skill"></li>
               
             </ul>
           </div>
@@ -72,31 +76,32 @@
             <h1 class="heading">WORK EXPERINCE</h1>
             <div class="underline"></div>
          
-         <a href="#" class="btndiv">+</a>  <div class="expconatiner" id="exp">
-              <h2 class=''>
-                <input type="text" placeholder="Company" id="company-form" class="h2">
+         <button class="btndiv experince-btn">+</button>  <div class="expconatiner" id="exp">
+              <h2>
+                <input type="text" placeholder="Company" id="company-form" class='class-com h2'>
                 <span class="post ">
-                <input type="text" name="" class="post" id="company-post-form" placeholder="your post">
+                <input type="text" name="" class="class-com" id="company-post-form" placeholder="your post">
               </span>
             </h2>
-              <p class="date "><input type="text" id="date-form" placeholder="duration"></p>
-              <a href="#" class="btnli">+</a> 
+              <p class=""><input type="text" id="date-form" placeholder="duration" class="class-com"></p>
                <ul class="ulc">
-                <li class=''><input type="text" name="" id="experince-form" placeholder="work expeince"></li>
-                
+                <li class=''>
+                  <textarea name="" id="work-exp-form" cols="30"  class='class-com' placeholder="xyz"></textarea>
+                </li>
               </ul>
             </div>
           </div>
         </section>
       </div>  
       <div class="preview">
-        <a href="#" class="btn-preview" id="btn-form"> Preview</a>
+        
+        <button class="btn-preview" id="btn-form"> Preview</button>
       </div>
     </div>
 
     <div class="page" id="page">
       <header>
-        <img class="img" src="../profile.png" alt="" srcset="" />
+        <img class="img" src="../profile.png" alt="" id="imgtemp" srcset="" />
         <div class="name">
           <h1 class='bigname' id="bigname-temp"> Himanshu Ramani </h1>
           <h3 class='bignamepost' id="post-temp">MARKETING ASSISTANT</h3>
@@ -129,9 +134,7 @@
               9998060495
             </p class='edit'>
             <p class="linkedin">
-              <!-- <i class="fa fa-linkedin" aria-hidden="true"></i>
-              &nbsp;&nbsp;
-            <p>Himanshu Ramani</p>   -->
+            
             
             </p>
           </div>
@@ -140,39 +143,38 @@
             <div class="underline"></div>
             <p class='edit' id="collage-temp">
               <i class="fa fa-institution" aria-hidden="true"></i
-              >&nbsp;&nbsp;Mumbai University
+              >Mumbai University
             </p>
-            <p id="degree-temp">
-              <i class="fa fa-mortar-board" aria-hidden="true"></i
-              >&nbsp;&nbsp;Bachelor in marketing,2018
-            </p>
+         
           </div>
         </section>
         <section class="second">
           <div class="skill">
             <h1 class="heading">SKILLS</h1>
             <div class="underline"></div>
-            <ul id = 'skill-cont'>
-              <li class='edit' id="skill-temp" >Exceptional commounnication and networking skills</li>
+            <ul id = 'skill-container'>
+       <li id="skill-temp">...</li>
              
             </ul>
           </div>
-          <div class="experince">
-            <h1 class="heading">WORK EXPERINCE</h1>
-            <div class="underline"></div>
-            <p class="date " id="date-temp">JUN.,2019-JAN.2020</p>
-            <h2 class='' id="company-temp" >Randelo&co.,</h2><span class="post" id="company-post-temp">Marketing Assistant</span>
+          <div class="exp-div-temp">
+          <h1 class="heading">WORK EXPERINCE</h1>
+          <div class="underline"></div>
+          <div class="experince" id="id">
+            <h2 class='company' id="company-temp" >Randelo&co.,</h2><span class="company" id="company-post-temp">Marketing Assistant</span>
+            <p class="company" id="date-temp">JUN.,2019-JAN.2020</p>
             <ul>
-              <li class='' id="experince-temp">Monitored ongoing marketing campaigns.</li>
+              <li class='' id="work-exp-temp">Monitored ongoing marketing campaigns.</li>
         
             </ul>
-          
+          </div>
           </div>
         </section>
       </div>
     </div>
     <div class="preview">
-      <a href="#" class="btn-preview pdf" id="pdf-btn"> save</a>
+      <button class="btn-preview" id="btn-back"> back</button>
+      <button class="btn-preview pdf" id="pdf-btn"> save</button>
     </div>
     <script src="./templete.js"></script>
   </body>
