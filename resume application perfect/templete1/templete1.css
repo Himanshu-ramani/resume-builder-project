@@ -8,12 +8,19 @@
   background: transparent;
   border: none;
   outline: none;
+  -webkit-print-color-adjust: exact !important; /*Chrome, Safari */
+  color-adjust: exact !important; /*Firefox*/
 }
 .form {
   /* height: 1123px; */
   width: 794px;
   margin: auto;
 }
+textarea {
+  resize: none;
+  vertical-align: top;
+}
+
 .pdf {
   display: none;
 }
@@ -175,4 +182,11 @@ h2 {
   display: flex;
   justify-content: space-evenly;
   margin: 50px 0;
+}
+.collages {
+  margin-left: 18px;
+  padding-top: 12px;
+}
+input {
+  width: auto;
 }

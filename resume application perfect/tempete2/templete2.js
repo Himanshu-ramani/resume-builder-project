@@ -11,6 +11,21 @@ imginput.addEventListener("change", function (e) {
   imgtemp.setAttribute("src", tempUrl);
 });
 ///////////////////////////////////
+const addBtnSkill = document.querySelector("#add-skill-btn");
+const subBtnSkill = document.querySelector("#sub-skill-btn");
+const skillConatiner = document.getElementById("skill-container");
+
+addBtnSkill.addEventListener("click", function () {
+  htmls = ` <li>
+  <input type="text" name="" id="skillarray" class="skill"
+  placeholder="Skills" />
+</li>`;
+  skillConatiner.insertAdjacentHTML("beforeend", htmls);
+});
+subBtnSkill.addEventListener("click", function () {
+  let lastchild = skillConatiner.lastElementChild;
+  skillConatiner.removeChild(lastchild);
+});
 /////add feilds btn//////////////////
 const expBtn1 = document.getElementById("experince-btn");
 const expconatiner = document.getElementById("experince-container");
@@ -604,3 +619,17 @@ document.getElementById("btn-save").addEventListener("click", function () {
   document.getElementById("btn-save").style.display = "none";
   window.print();
 });
+//////////
+const tx = document.getElementsByTagName("textarea");
+for (let i = 0; i < tx.length; i++) {
+  tx[i].setAttribute(
+    "style",
+    "height:" + tx[i].scrollHeight + "px;overflow-y:hidden;"
+  );
+  tx[i].addEventListener("input", OnInput, false);
+}
+
+function OnInput() {
+  this.style.height = "auto";
+  this.style.height = this.scrollHeight + "px";
+}

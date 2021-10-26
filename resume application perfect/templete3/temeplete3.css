@@ -8,6 +8,8 @@
   background: transparent;
   border: none;
   outline: none;
+  -webkit-print-color-adjust: exact !important; /*Chrome, Safari */
+  color-adjust: exact !important; /*Firefox*/
 }
 #page {
   display: none;
@@ -16,6 +18,10 @@
   /* height: 1123px; */
   width: 794px;
   margin: auto;
+}
+textarea {
+  resize: none;
+  vertical-align: top;
 }
 header {
   height: 200px;

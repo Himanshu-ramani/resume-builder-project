@@ -46,14 +46,16 @@ btnEducation.addEventListener("click", function () {
 const addBtnSkill = document.querySelector(".add-skill-btn");
 const subBtnSkill = document.querySelector(".sub-skill-btn");
 const skillConatiner = document.getElementById("skill-container");
+
 addBtnSkill.addEventListener("click", function () {
   htmls = ` <li><input type="text" name="" id="skill-form" class="lp" placeholder="skill"></li>`;
   skillConatiner.insertAdjacentHTML("beforeend", htmls);
 });
-// subBtnSkill.addEventListener("click", function () {
-//   skillConatiner.appendChild(-1).removeChild();
-// });
-//////////////////////////
+subBtnSkill.addEventListener("click", function () {
+  let lastchild = skillConatiner.lastElementChild;
+  skillConatiner.removeChild(lastchild);
+});
+////////////////////////
 // const subbtn = document.querySelector(".btnli");
 // const expSubCont = document.querySelector(".ulc");
 // subbtn.addEventListener("click", function () {
@@ -298,3 +300,16 @@ document.getElementById("pdf-btn").addEventListener("click", function () {
   backbtn.style.display = "none";
   window.print();
 });
+const tx = document.getElementsByTagName("textarea");
+for (let i = 0; i < tx.length; i++) {
+  tx[i].setAttribute(
+    "style",
+    "height:" + tx[i].scrollHeight + "px;overflow-y:hidden;"
+  );
+  tx[i].addEventListener("input", OnInput, false);
+}
+
+function OnInput() {
+  this.style.height = "auto";
+  this.style.height = this.scrollHeight + "px";
+}
