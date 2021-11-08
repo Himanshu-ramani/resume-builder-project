@@ -4,20 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./templete1.css">
+    <meta name="viewport" content="width = device-width" />
+    <link rel="stylesheet" href="./templete.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>RESUME / TEMPLETE</title>
   </head>
   <body>
-    <div class="form" id="form">
+    <div class="page">
       <header>
-        <div class="imgdiv">
-      <label for="filefeild">  <img class="img" src="../profile.jpg" alt="" srcset="" id="img-f" /></label>
-      <input type="file" name="" id="filefeild" class="file">
-      <!-- <p class="text">Add here</p> -->
-      </div>
+        <label for="filefeild">  <img class="img" src="../profile.jpg" alt="" srcset="" id="img-f" /></label>
+        <input type="file" name="" id="filefeild" class="file">
         <div class="name">
-          <h1 class='himanshu'> <input type="text" name="" id="bigname-form" class="himanshu" placeholder="Name"> </h1>
-          <h3 class=''><input type="text" name="" class="upperpost" id="post-form" placeholder="apply for the post"></h3>
+          <h1 class='bigname' id="bigname"><input type="text" class="bigname"  placeholder="NAME" name="" id=""></h1>
+          <h3 class='bignamepost'><input type="text" placeholder="Post" class="post"></h3>
         </div>
       </header>
       <div class="info">
@@ -25,157 +27,75 @@
           <div class="profile">
             <h1 class="heading">PERSONAL PROFILE</h1>
             <div class="underline"></div>
-            <p class=''>
-           <textarea name="" id="about-form" cols="30" rows="10" placeholder="your information"></textarea>
+            <p class='aboutp'>
+              <textarea name="" spellcheck="false" placeholder="About yourself" class="about" id="" cols="30" rows="2"></textarea>
+            </p>
           </div>
           <div class="contact">
             <h1 class="heading">CONTACT</h1>
             <div class="underline"></div>
-            <p>
-              <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;&nbsp;
-              <input type="text" id="address-form" placeholder="addres ">
+            <p id="addressp">
+            <button id="btn-address" >-</button>  <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;&nbsp;
+              <textarea name="" class="address" placeholder="Address" id="" cols="" rows="1"></textarea>
             </p>
-            <p class=''>
-              <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;
-              <input type="text" id="email-form" placeholder="Email">
+            <p id='emailp'>
+              <button id="btn-email" >-</button> <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;
+              <input type="text" placeholder="E-mail" class="email">
             </p>
-            <p class=''>
-              <i class="fa fa-phone" aria-hidden="true"></i> &nbsp;&nbsp;
-              <input type="text" id="number-form" placeholder="Phone number">
+            <p id='numberp'>
+              <button id="btn-number">-</button> <i class="fa fa-phone" aria-hidden="true"></i> &nbsp;&nbsp;
+              <input type="number" name="" placeholder="Ph. Number" class="number" id="">
             </p class='edit'>
-            
+            <p class="linkedinp">
+              <button id="btn-linkedin">-</button>  <i class="fa fa-linkedin" aria-hidden="true"></i>
+              &nbsp;&nbsp;
+              
+                <input type="text" class="linkedin" placeholder="Linked in" name="" id=""></a
+              >
             </p>
           </div>
+          <h1 class="heading">EDUCATION</h1>
+          <div class="underline"></div>
           <div class="eduction">
-            <h1 class="heading">EDUCATION</h1>
-            <div class="underline"></div>
-            <button class="btnedu" id="education-btn">+</button>
-           <div class="educontainer">
-           
-            
-            <input type="text" placeholder="your collage" class="collages" id="collage-form">
-      
-           
-            <input type="text" placeholder="Your degree" class="collages" id="collage-form">
-           
+            <p class='edit'>
+              <i class="fa fa-institution" aria-hidden="true"></i
+              >&nbsp;&nbsp;<input type="text" placeholder="University" name="" class="collage" id="">
+            </p>
+            <p>
+              <i class="fa fa-mortar-board" aria-hidden="true"></i
+              >&nbsp;&nbsp;<input type="text" class="collage" placeholder="Degree" name="" id="">
+            </p>
           </div>
-           </div>
         </section>
         <section class="second">
           <div class="skill">
-            <h1 class="heading">SKILLS</h1>
+            <h1 class="heading">SKILLS</h1> 
             <div class="underline"></div>
-            <button class="btnskill add-skill-btn">+</button> 
-            <button class="btnskill sub-skill-btn">-</button>
+            <button id="skill-btn-add" >+</button>
             <ul id="skill-container">
-             <li><input type="text" name="" id="skill-form" class="lp" placeholder="skill"></li>
               
+              <li><textarea name="" id="" class="skills" cols="43" rows="1" placeholder="Skill"></textarea> <button id="subSkill" class="subskill">-</button></li>
             </ul>
           </div>
-          <div class="experince">
-            <h1 class="heading">WORK EXPERINCE</h1>
+          <h1 class="heading">WORK EXPERINCE</h1>
             <div class="underline"></div>
-         
-         <button class="btndiv experince-btn">+</button>  <div class="expconatiner" id="exp">
-              <h2>
-                <input type="text" placeholder="Company" id="company-form" class='class-com h2'>
-                <span class="post ">
-                <input type="text" name="" class="class-com" id="company-post-form" placeholder="your post">
-              </span>
-            </h2>
-              <p class=""><input type="text" id="date-form" placeholder="duration" class="class-com"></p>
-               <ul class="ulc">
-                <li class=''>
-                  <textarea name="" id="work-exp-form" cols="30" rows="1" class='class-com' placeholder="xyz"></textarea>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-      </div>  
-      <div class="preview">
-        
-        <button class="btn-preview" id="btn-form"> Preview</button>
-      </div>
-    </div>
-
-    <div class="page" id="page">
-      <header>
-        <img class="img" src="../profile.jpg" alt="" id="imgtemp" srcset="" />
-        <div class="name">
-          <h1 class='bigname' id="bigname-temp"> Himanshu Ramani </h1>
-          <h3 class='bignamepost' id="post-temp">MARKETING ASSISTANT</h3>
-        </div>
-      </header>
-      <div class="info">
-        <section class="first">
-          <div class="profile">
-            <h1 class="heading">PERSONAL PROFILE</h1>
-            <div class="underline"></div>
-            <p class='about-temp' id="about-temp">
-              Extremely motivated to constantly develop my skills and grow
-              professionally.I am connfident in my ability to come up with
-              intersting ideas for unforgettable marketing compaigns
-            </p>
-          </div>
-          <div class="contact">
-            <h1 class="heading">CONTACT</h1>
-            <div class="underline"></div>
-            <p id="address-temp">
-              <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;&nbsp;
-              MUMBAI, INDIA
-            </p>
-            <p id='email-temp'>
-              <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;
-              ramanihimanshu58@gmail.com
-            </p>
-            <p id='number-temp'>
-              <i class="fa fa-phone" aria-hidden="true"></i> &nbsp;&nbsp;
-              9998060495
-            </p class='edit'>
-            <p class="linkedin">
-            
-            
-            </p>
-          </div>
-          <div class="eduction">
-            <h1 class="heading">EDUCATION</h1>
-            <div class="underline"></div>
-            <p class='edit' id="collage-temp">
-              <i class="fa fa-institution" aria-hidden="true"></i
-              >Mumbai University
-            </p>
-         
-          </div>
-        </section>
-        <section class="second">
-          <div class="skill">
-            <h1 class="heading">SKILLS</h1>
-            <div class="underline"></div>
-            <ul id = 'skill-container'>
-       <li id="skill-temp">...</li>
+            <button id="btn-exp">+</button>
+          <div class="experince" id="exp-cont">
+            <h2 class='edit'><input type="text"   placeholder="compnay"  name="" class="compnay"  > <span class=" edit"> <input type="text"  placeholder="post" name="" class="comp-post"></span></h2>
+            <p class="date edit"><input type="number"  min="1900" max="2099" placeholder="Duration"></p>
+            <button id="btn-exp" onclick="exp()">+</button>
+            <ul class="exp-container">
+              <li><textarea name="" id="" placeholder="Work Experince" cols="43" rows="1" class="skills"></textarea><button>-</button> </li>
              
             </ul>
-          </div>
-          <div class="exp-div-temp">
-          <h1 class="heading">WORK EXPERINCE</h1>
-          <div class="underline"></div>
-          <div class="experince" id="id">
-            <h2 class='company' id="company-temp" >Randelo&co.,</h2><span class="company" id="company-post-temp">Marketing Assistant</span>
-            <p class="company" id="date-temp">JUN.,2019-JAN.2020</p>
-            <ul>
-              <li class='' id="work-exp-temp">Monitored ongoing marketing campaigns.</li>
-        
-            </ul>
-          </div>
+            
           </div>
         </section>
       </div>
     </div>
-    <div class="preview">
-      <button class="btn-preview" id="btn-back"> back</button>
-      <button class="btn-preview pdf" id="pdf-btn"> save</button>
+    <div class="pdf-c">
+    <a href="#" id="pdf-btn"  rel="noopener noreferrer">Save PDF</a>
     </div>
-    <script src="./templete.js"></script>
+    <script src="./resume.js"></script>
   </body>
 </html>

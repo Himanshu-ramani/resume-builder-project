@@ -11,7 +11,7 @@
     <div class="form" id="form">
       <header>
         <label for="filefeild">
-          <img class="img" src="../profile.jpg" alt="" srcset="" id="img-f"
+          <img class="img" src="./profile.jpg" alt="" srcset="" id="img-f"
         /></label>
         <input type="file" name="" id="filefeild" class="file" />
         <p class="">
@@ -26,143 +26,96 @@
       </header>
       <div class="info">
         <section class="one">
-          <div class="heading">ABOUT</div>
-          <p class="">
-            <textarea
-              name=""
-              id="summary-form"
-              cols="30"
-              rows="10"
-              class="summary"
-              placeholder="about summary"
-            ></textarea>
-          </p>
+          <br />
+          <br />
           <p class="heading">CONTACT</p>
           <div class="contact">
             <p class="address">
-              <input
-                type="text"
-                name=""
-                id="address-form"
+              <label for="address">Address</label>
+              <br />
+              <textarea
+                name="address"
+                id="address"
+                cols="30"
+                rows="1"
                 placeholder="Address"
-              />
+              ></textarea>
             </p>
             <p class="email">
+              <label for="eamil-form">E-mail</label>
+              <br />
               <input type="text" name="" id="email-form" placeholder="Email" />
             </p>
             <p class="phone">
-              <input type="text" name="" id="phone-form" placeholder="number" />
+              <label for="phone-form">Phone Number</label>
+              <input
+                type="number"
+                name=""
+                id="phone-form"
+                placeholder="Number"
+              />
             </p>
           </div>
         </section>
         <section class="two">
+          <div class="heading">SUMMARY</div>
+          <div class="summary">
+            <textarea
+              name=""
+              id=""
+              cols="45"
+              rows="3"
+              placeholder="summary about yourself"
+            ></textarea>
+          </div>
           <div class="heading">EXPERINCE</div>
+          &nbsp;<button onclick="addExp()">Add Experince</button>
           <div class="experince" id="exp-container-form">
-            <button class="btn-desgin" id="exp-btn">+</button>
-            <p class="exp-array">
+            <div class="container">
+              <button onclick="deletec()">delete</button>
+              <input type="text" class="Company" placeholder="COMPANY" /> <br />
               <input
                 type="text"
                 name=""
-                id="company-form"
-                placeholder="company"
+                id=""
+                class="post"
+                placeholder="Post"
               />
-            </p>
-            <p class="post">
-              <input type="text" name="" id="post-form" placeholder="post" />
-            </p>
-            <ul>
-              <li>
-               <textarea name="" id="expreince-work-form" cols="30" rows="3" placeholder="Work Experience"></textarea>
-              </li>
-            </ul>
+              <br />
+              <textarea
+                name=""
+                id=""
+                cols="60"
+                rows="2"
+                placeholder="Experince"
+              ></textarea>
+            </div>
           </div>
           <div class="heading">EDUCATION</div>
-          <div class="eduction" id="study-container">
-            <button class="btn-desgin" id="study-btn">+</button>
-            <p class="edu">
+          &nbsp;<button onclick="addedu()">Add Education</button>
+          <div class="education">
+            <div class="eduContainer">
+              <button onclick="deletec()">delete</button>
               <input
                 type="text"
                 name=""
-                id="university-form"
-                placeholder="university"
-              />
-            </p>
-            <p class="post">
-              <input
-                type="text"
-                name=""
-                id="course-form"
-                placeholder="course" />
-            </p>
-            <ul>
-              <li>
-               <textarea name="" id="course-info-form" cols="30" rows="3" placeholder="study"></textarea>
-              </li>
-            </ul>
+                class="university"
+                id=""
+                placeholder="UNIVERSITY"
+              /><br />
+              <input type="text" placeholder="DEGREE" class="university" />
+              <br />
+              <br>
+            </div>
           </div>
         </section>
       </div>
-      <footer></footer>
-
-      <div class="preview">
-        <button class="btn-preview" id="btn-form"> Preview</button>
-      </div>
-      </div>
-    </div>
-    <div class="page" id="page">
-      <header>
-        <img
-          class="img"
-          src="../profile.jpg"
-          alt=""
-          srcset=""
-          id="form-profile"
-        />
-        <p class="bigname" id="name-temp">HIMANSHU RAMANI</p>
-      </header>
-      <div class="info">
-        <section class="one">
-          <div class="heading">ABOUT</div>
-          <p class="summary" id="summary-temp">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
-            ducimus dolorem alias impedit excepturi laudantium adipisci aliquam
-            nihil maiores veritatis!
-          </p>
-          <p class="heading">CONTACT</p>
-          <div class="contact">
-            <p class="address" id="address-temp">MUMBAI,INDIA</p>
-            <p class="email" id="email-temp">ramanihimanshu@gmail.com</p>
-            <p class="phone" id="phone-temp">998060495</p>
-          </div>
-        </section>
-        <section class="two">
-          <div class="heading">EXPERINCE</div>
-          <div class="experince" id="exp-container-temp">
-            <p class="company" id="company-temp">RAMANI INDUSTRIES</p>
-            <p class="post" id="post-temp">full stack Developer</p>
-            <ul>
-              <li id="expreince-work-temp">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </li>
-            </ul>
-          </div>
-          <div class="heading">EDUCATION</div>
-          <div class="eduction" id="study-container-temp">
-            <p class="company" id="university-temp">RAMANI INDUSTRIES</p>
-            <p class="post" id="course-temp">full stack Developer</p>
-            <ul>
-              <li id="course-info-temp">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
+      <div class="underline"></div>
       <footer></footer>
     </div>
-    <div class="preview">
-      <button class="btn-preview" id="back-btn"> Back</button>
-      <button class="btn-preview" id="pdf"> Save</button>
-    </div>    <script src="./temeplete3.js"></script>
+<div class="btncont">
+<button id="save" onclick="pdf()">Save</button>
+</div>
+    <script src="./temeplete3.js"></script>
   </body>
 </html>

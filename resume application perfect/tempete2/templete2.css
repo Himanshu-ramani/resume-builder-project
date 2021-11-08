@@ -11,26 +11,42 @@
   -webkit-print-color-adjust: exact !important; /*Chrome, Safari */
   color-adjust: exact !important; /*Firefox*/
 }
+@media print {
+  @page {
+    margin: 0;
+  }
+  body {
+    margin: auto;
+  }
+}
 body {
   margin: 0;
   padding: 0;
+}
+.btn{
+  margin-left: 5px;
+  background-color: rgba(128, 128, 128, 0.678);
+padding: 2px 6px;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
 }
 /* css of form */
 .from {
   /* height: 1123px; */
   width: 794px;
   margin: auto;
+  margin-top: 10px;
 }
 textarea {
   resize: none;
   vertical-align: top;
+  overflow: hidden;
 }
 .page {
   display: none;
 }
-.comapny {
-  font-weight: 500;
-}
+
 .btn-preview {
   text-decoration: none;
   color: grey;
@@ -54,7 +70,7 @@ textarea {
 header {
   height: 200px;
   width: 100%;
-  background: lightblue;
+  background: rgb(174, 255, 228);
   border-bottom-left-radius: 100px;
   border-top-left-radius: 100px;
   display: flex;
@@ -65,9 +81,12 @@ header {
   margin: 20px;
   font-size: 3rem;
   color: white;
+  text-transform:uppercase;
 }
 .post {
   font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
   margin: 0 50px;
   color: white;
 }
@@ -82,50 +101,53 @@ header {
 }
 .info {
   display: grid;
+  margin: 0 10px;
+  margin-top: 20px;
   grid-template-columns: 1fr 1fr;
-  /* border: 3px solid rgba(128, 128, 128, 0.205); */
+  border: 3px solid rgba(128, 128, 128, 0.205);
+  padding: 20px;
 }
-.heading {
-  font-size: 1.8rem;
+input{
+  width: auto;
+}
+.duration,
+.company{
   font-weight: 600;
+  width: 70px;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+.heading{
   color: aquamarine;
-  margin: 30px 0 10px 30px;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-left: 10px;
+  display: inline-block;
 }
-.preview {
-  display: flex;
-  justify-content: space-evenly;
+.experinceConatiner,
+.contact,
+.eduction,
+.skills,
+.refrence{
+  margin-left: 12px;
 }
-#btn-back {
-  display: none;
+ul{
+  padding-left: 30px;
 }
-#btn-save {
-  display: none;
+.skills{
+  margin-top: 5px;
 }
-li {
-  margin: 3px 3px 3px 20px;
+/*  */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-/* css termplete */
-.page {
-  /* height: 1123px; */
-  width: 794px;
-  margin: auto;
-  margin-top: 0;
-}
-.experince {
-  padding: 10px 30px;
-}
-.contact {
-  margin: 5px 5px 5px 30px;
-}
-.eduction {
-  padding: 5px 30px;
-}
-.exp-ul {
-  margin-left: 20px;
-}
-.skills {
-  margin-left: 50px;
-}
-.refrence {
-  margin-left: 50px;
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

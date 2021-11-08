@@ -10,7 +10,7 @@
   <body>
     <div class="from" id="form">
       <header>
-      <label for="filefeild">  <img class="img from-dp" src="../profile.jpg" alt="" srcset="" id="img-f" /></label>
+      <label for="filefeild">  <img class="img from-dp" src="./profile.jpg" alt="" srcset="" id="img-f" /></label>
       <input type="file" name="" id="filefeild" class="file">
       <div class="name">
           <p class="" id="from-big-name">
@@ -29,176 +29,59 @@
       </header>
       <div class="info">
         <section class="one">
-          <p class="heading">WORK EXPERINCE</p>
-          <div> <button class="btnedu" id="experince-btn">+</button></div>
-          <div class="experince" id="experince-container">
-            <span class="array"
-              ><input
-                type="text"
-                name=""
-                id="date-form"
-                placeholder="mm/yy/ - mm/yy "
-              /> </span
-            ><span class="comapny"
-              ><input
-                type="text"
-                name=""
-                class=""
-                id="form-Company"
-                placeholder="Company"
-            /></span>
-            <p class="experince-profession">
-              <input
-                type="text"
-                name=""
-                id="form-profession"
-                placeholder="Profession"
-              />
-            </p>
-          
-            <ul class="exp-ul" id="exp-ul">
-              <li class="li">
-               <textarea name="" id="work-exp-form" cols="30" rows="2" placeholder="Work exprince"></textarea>
-              </li>
-            </ul>
-          </div>
-          <p class="heading">CONTACT</p>
-          <div class="contact">
-            <div><input type="text" id="address-form" placeholder="Address" /></div>
-            <div><input type="text" id="phone-form" placeholder="Phone" /></div>
-            <div><input type="text" id="email-form" placeholder="E-mail" /></div>
-          </div>
-        </section>
-        <section class="two">
-          <p class="heading">EDUCATION</p>
-        <div><button class="btnedu" id="study-btn">+</button></div>
-          <div class="eduction" id="eduction">
-            <span class="date-study date"
-              ><input
-                type="text"
-                name=""
-                id="study-date-form"
-                placeholder="mm/yy/-mm/yy" /></span
-            ><span class="studyarray"
-              ><input type="text" name="" id="university-form" placeholder="University"
-            /></span>
-            <p class="">
-              <input
-                type="text"
-                name=""
-                id="course-form"
-                placeholder="Degree"
-              />
-            </p>
-            <ul class="StudyUl">
-              <li>
-                <textarea name="" id="study-work-form" cols="30" rows="2" placeholder="Study"></textarea>
-              </li>
-            </ul>
-          </div>
-          <p class="heading">SKILLS & EXPERTISE</p>
-          <div class="skills">
-            <button class="btnedu" id="add-skill-btn">+</button>
-            <button class="btnedu" id="sub-skill-btn">-</button>
-            <ul id="skill-container">
-              <li>
-                <input type="text" name="" id="skillarray" class="skill"
-                placeholder="Skills" />
-              </li>
-            </ul>
-          </div>
-          <p class="heading">REFERENCE</p>
-          <div class="refrence">
-            <p class="refrence-name">
-              <input type="text" name="" id="refrence-name-form" placeholder="Refrence Name" />
-            </p>
-            <textarea
-              name=""
-              id="refrence-detail-form"
-              cols="30"
-              rows="2"
-              placeholder="Refrence Detail"
-            ></textarea>
-          </div>
-        </section>
-      </div>
-    </div>
-    <div class="preview">
-    
-      <button class="btn-preview" id="btn-form"> Preview</button>
-    </div>
-    <div class="page" id="page">
-      <header>
-        <img id="form-profile" class="from-dp" src="../profile.jpg" alt="" />
-        <div class="name">
-          <p class="bigname" id="temp-big-name">
-            HIMANSHU RAMANI
-          </p>
-          <p class="post" id="post-temp">
-           WEB devloper
-          </p>
-        </div>
-      </header>
-      <div class="info">
-        <section class="one">
-          <p class="heading">WORK EXPERINCE</p>
-          <div class="experince" id="temp-exp">
-            <span class="date" id="date-temp"
-              >2020-2021 </span
-            ><span class="comapny" id="temp-company"
-              >Design Clock Inc</span>
-            <p class="experince-profession" id="experince-post">
-              full stack web devloper
-            </p>
+          <div class="heading">WORK  EXPERINCE</div><button class="btn" id="full-exp">add Experince</button>
+          <div class="experinceConatiner" id="exp-container">
+          <div class="container" id="cont"> <input type="number" class="duration"  min="1900" max="2099" placeholder="Duration">,<input type="text" class="company" placeholder="Company" ><button class="btn" id="sub" onclick="subCompany()">-</button>
+            <br>
+            <input type="text" placeholder="Post" class="pot-company">
             <ul>
-              <li class="li" id="work-exp-temp">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, placeat!
+              <button class="btn" onclick="addli()">+</button>
+              <li><textarea name="" id="" class="work-experince" cols="40" rows="1" placeholder="Work Experince"></textarea><button class="btn" id="subli" onclick="subli()">-</button></li>
             </ul>
+            </div>
+            <br>
           </div>
-          <p class="heading">CONTACT</p>
+          <div class="heading">CONTACT</div>
           <div class="contact">
-            <div id="address-temp">MUMBAI ,INDIA</div>
-            <div id="phone-temp">9998060495</div>
-            <div id="email-temp">himanshuramani@gamil.com</div>
+            <textarea name="" id="" placeholder="Address" cols="40" rows="1"></textarea>
+            <br>
+            <input type="number" name="" placeholder="Ph. Number" id="">
+            <br>
+            <input type="text" placeholder="email">
           </div>
         </section>
         <section class="two">
-          <p class="heading">EDUCATION</p>
-          <div class="eduction" id="study-container-temp">
-            <span class="date" id="study-date-temp"
-              >2014-2020</span
-            ><span class="comapny" id="university-temp"
-              > University</span>
-            <p class="experince-profession" id="course-temp">
-              BCA
-            </p>
-            <ul class="exp-ul">
-              <li id="study-work-temp">
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, expedita.
-              </li>
+          <div class="heading">EDUCATION</div><button class="btn" onclick="addcollage()">Add Education</button>
+          <div class="eduction">
+            <div class="container">
+            <input type="number"  min="1900" max="2099" class="duration" placeholder="Duration">,<input type="text" class="company" placeholder="University" ><button class="btn" onclick="subcollage()">-</button>
+            <br>
+            <input type="text" placeholder="Degree" class="pot-company">
+            <ul>
+              <button class="btn" onclick="addstudy()">+</button>
+              <li><textarea name="" id="" class="work-experince" cols="40" rows="1" placeholder="Study"></textarea><button class="btn"onclick="subli()">-</button></li>
             </ul>
           </div>
-          <p class="heading">SKILLS & EXPERTISE</p>
+          <br>
+          </div>
+          <div class="heading">SKILLS & EXPERTISE</div><button class="btn" onclick="addskill()">+</button>
           <div class="skills">
-            <ul id="skill-li">
-              <li>
-               Lorem ipsum dolor sit amet consectetur.
-              </li>
+            <ul id="skill-container">
+              <li><textarea name="" id="" cols="40" placeholder="skills" rows="1"></textarea><button class="btn" onclick="subli()">-</button></li>
             </ul>
           </div>
-          <p class="heading">REFERENCE</p>
+          <div class="heading">REFERENCE</div>
           <div class="refrence">
-            <p class="refrence-name" id="refrence-name-temp">
-              Parth
-            </p>
-           <p id="refrence-detail-temp"> Lorem ipsum dolor sit amet.</p>
+            <input type="text" style="text-transform: capitalize; font-weight: 500;" placeholder="Name" name="" id="">
+            <br>
+            <textarea name="" placeholder="Detail" id="" cols="30" rows="1"></textarea>
           </div>
         </section>
       </div>
     </div>
-    </div>
+   
     <div class="preview">
-      <button class="btn-preview" id="btn-back"> Back</button>
+      <!-- <button class="btn-preview" id="btn-back"> Back</button> -->
       <button class="btn-preview" id="btn-save"> Save</button>
     </div>
     <script src="./templete2.js"></script>
