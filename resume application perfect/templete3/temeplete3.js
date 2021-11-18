@@ -65,13 +65,19 @@ function addedu(){
 </div>`
 document.getElementsByClassName("education")[0].insertAdjacentHTML("beforeend",html)
 }
+const page = document.getElementById("form")
+const div = document.getElementsByClassName("btncont")[0]
 function pdf(){
  let btnarry = document.getElementsByTagName("button")
+ page.style.margin=" 0 auto"
  for (const btn of btnarry) {
    btn.style.display = "none"
  }
+ div.style.display ="none"
  window.print()
+ page.style.margin=" 10px auto"
  for (const btn of btnarry) {
   btn.style.display = "inline-block"
  }
+ div.style.display ="flex"
 }

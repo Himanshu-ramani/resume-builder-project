@@ -19,7 +19,9 @@
     margin: auto;
   }
 }
-
+body{
+  background:#dbd8e3;
+}
 textarea {
   resize: none;
   vertical-align: top;
@@ -110,10 +112,12 @@ input{
 }
 /* from css */
 .form {
-  /* height: 1123px; */
+  height: 1123px;
   width: 794px;
   margin: auto;
   margin-top: 10px;
+  background: white;
+  position: relative;
 }
 /* btn */
  button{
