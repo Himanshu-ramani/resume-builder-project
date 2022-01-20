@@ -61,7 +61,7 @@ header {
   margin: auto;
   color: white;
   letter-spacing: 3px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .name h3 {
   font-weight: 450;
@@ -71,7 +71,7 @@ header {
   color: white;
   letter-spacing: 3px;
   font-size: 1rem;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .info {
