@@ -425,11 +425,13 @@ btnPdf.addEventListener("click", function (e) {
 
   var node = document.getElementById('page');
 
-  htmlToImage.toPng(node)
-    .then(function (dataUrl) {
-      var img = new Image();
-     let imgData= img.src = dataUrl;
-      document.body.appendChild(img);
+  htmlToImage.toJpeg(document.getElementById('page'), { quality: 0.95 })
+  .then(function (dataUrl) {
+    var link = document.createElement('a');
+    link.download = 'my-image-name.jpeg';
+    link.href = dataUrl;
+    link.click();
+
       const pdf = new jsPDF();
       // const imgProps= pdf.getImageProperties(imgData);
       const pdfWidth = pdf.internal.pageSize.getWidth();
