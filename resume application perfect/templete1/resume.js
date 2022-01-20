@@ -423,27 +423,33 @@ const presentb = document.getElementsByClassName("box")
 btnPdf.addEventListener("click", function (e) {
   e.preventDefault();
 
-  var node = document.getElementById('page');
+  let node = document.getElementById('page');
+  html2pdf(node,{
+    margin:       0,
+    filename:     'myresume.pdf',
+    image:        { type: 'jpeg', quality: 0.98 },
+    html2canvas:  { scale: 4},
+    jsPDF:        {  format: 'a4', orientation: 'portrait' }
+  })
+  // htmlToImage.toJpeg(document.getElementById('page'), { quality: 0.95 })
+  // .then(function (dataUrl) {
+  //   var link = document.createElement('a');
+  //   link.download = 'my-image-name.jpeg';
+  //   link.href = dataUrl;
+  //   link.click();
 
-  htmlToImage.toJpeg(document.getElementById('page'), { quality: 0.95 })
-  .then(function (dataUrl) {
-    var link = document.createElement('a');
-    link.download = 'my-image-name.jpeg';
-    link.href = dataUrl;
-    link.click();
+  //     const pdf = new jsPDF();
+  //     // const imgProps= pdf.getImageProperties(imgData);
+  //     const pdfWidth = pdf.internal.pageSize.getWidth();
+  //     const pdfHeight = (imgProps.height * pdfWidth) / 
+  //     pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+  //     pdf.save('download.pdf');
 
-      const pdf = new jsPDF();
-      // const imgProps= pdf.getImageProperties(imgData);
-      const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfHeight = (imgProps.height * pdfWidth) / 
-      pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-      pdf.save('download.pdf');
-
-      // const pfx = new jsPDF()
-    })
-    .catch(function (error) {
-      console.error('oops, something went wrong!', error);
-    });
+  //     // const pfx = new jsPDF()
+  //   })
+  //   .catch(function (error) {
+  //     console.error('oops, something went wrong!', error);
+  //   });
  
 });
 
