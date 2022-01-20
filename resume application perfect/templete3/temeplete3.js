@@ -1,3 +1,6 @@
+import * as htmlToImage from 'html-to-image';
+import { jsPDF } from "jspdf";
+
 const imginput = document.getElementById("filefeild");
 const imgf = document.getElementById("img-f");
 const imgtemp = document.getElementById("form-profile");
@@ -81,3 +84,19 @@ function pdf(){
  }
  div.style.display ="flex"
 }
+
+
+const downloadPdf = () => {
+  htmlToImage.toPng(document.getElementById('form'), { quality: 0.95 })
+  .then(function (dataUrl) {
+    var link = document.createElement('a');
+    link.download = 'my-image-name.jpeg';
+    const pdf = new jsPDF();
+    const imgProps= pdf.getImageProperties(dataUrl);
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+    pdf.addImage(dataUrl, 'PNG', 0, 0,pdfWidth, pdfHeight);
+    pdf.save("download.pdf"); 
+  });
+}
+downloadPdf()

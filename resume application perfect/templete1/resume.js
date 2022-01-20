@@ -1,3 +1,4 @@
+// const { default: jsPDF } = require("jspdf");
 
 const tx = document.getElementsByTagName("textarea");
 function OnInput() {
@@ -421,19 +422,27 @@ const addmore = document.getElementById("add-more")
 const presentb = document.getElementsByClassName("box")
 btnPdf.addEventListener("click", function (e) {
   e.preventDefault();
-  document.getElementById("page").style.margin ="0 auto"
-  const btnarray = document.getElementsByTagName("button");
-  addmore.style.display = "none"
-  for (const ele of presentb) {
-    ele.style.display="none"
-  }
-  btnPdf.style.display = "none";
-  window.print();
-  addmore.style.display = "block"
-  btnPdf.style.display = "flex";
-  for (const ele of presentb) {
-    ele.style.display="inline"
-  }
+
+  var node = document.getElementById('page');
+
+  htmlToImage.toPng(node)
+    .then(function (dataUrl) {
+      var img = new Image();
+     let imgData= img.src = dataUrl;
+      document.body.appendChild(img);
+      const pdf = new jsPDF();
+      // const imgProps= pdf.getImageProperties(imgData);
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = (imgProps.height * pdfWidth) / 
+      pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+      pdf.save('download.pdf');
+
+      // const pfx = new jsPDF()
+    })
+    .catch(function (error) {
+      console.error('oops, something went wrong!', error);
+    });
+ 
 });
 
 //////////////////////////////////////////
