@@ -39,14 +39,14 @@ const downLoadPdf =  function (e) {
   
     let node = document.getElementById("page");
     // node.style.display ="block"
-    node.style.margin =0 
+    node.style.margin = 0 
   
     html2pdf(node,{
       margin:       0,
       filename:     'myresume.pdf',
-      image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { scale: 4},
-      jsPDF:        {  format: 'a4', orientation: 'portrait' }
+      image:        { type: 'jpeg', quality: 4 },
+      html2canvas:  {PPI :96, letterRendering:true, scale: 3},
+      jsPDF:        {  format: 'a4', orientation:"portrait"}
     })
     node.style.margin ="auto"
 }

@@ -4,8 +4,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+@media print {
+    @page {
+      margin: 0;
+    }
+    body {
+      margin: auto;
+    }
+  }
 .heading-my{
-    width:842px ;
+    width: 595px;
     margin: 50px auto 30px auto;
     font-weight: 800;
     font-family: 'Roboto', sans-serif;
@@ -33,10 +41,11 @@ textarea{
     margin: auto;
     top: 0;
     width: 80%;
+
 }
 .page{
-    height: 595px;
-    width: 842px;
+ height: 1123px;
+  width: 794px;
     background: white;
     margin: auto;
 
@@ -96,3 +105,61 @@ textarea{
   .info{
       background: #222A33;
   }
+
+  .main{
+      color: #222A33;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 30px;
+  }
+  .eduction{
+      margin-bottom: 30px;
+  }
+  .main-heading{
+      display: inline-block;
+      border: 0;
+      outline: 0;
+      color: #449399;
+      border-bottom: 3px solid #449399;
+      /* border-bottom-width: thik; */
+      font-size: 20px;
+      font-weight:bolder;
+  }
+    .particular{
+        border: 0;
+        outline: 0;
+        font-size:18px ;
+        font-weight: 900;
+        margin: 5px 0;
+    }
+    .particular::placeholder{
+        color: black;
+    }
+    .particular:focus::placeholder{
+        color: gray;
+    }
+    .place{
+        border: 0;
+        outline: 0;
+        font-size:18px ;
+        font-weight: 500;
+        margin: 5px 0;
+    }
+    .place::placeholder{
+        color: black;
+    }
+    .place:focus::placeholder{
+        color: gray;
+    }
+    .month{
+        border: 0;
+        outline: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+    .ul{
+        padding: 0 16px;
+    }
+    .li{
+        border: 0;
+        outline: 0;
+    }
