@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.heading-my{
+    width:842px ;
+    margin: 50px auto 30px auto;
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
+
+}
+body{
+    background: #313B47;
+    color: white;
+    font-family: 'Roboto', sans-serif;;
+}
+textarea{
+    background: transparent;
+    font-family: 'Roboto', sans-serif;
+    resize: none;
+    display: block;
+    width: 100%;
+}
+.pdfpage{
+    margin: 0 auto;
+}
+.nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    top: 0;
+    width: 80%;
+}
+.page{
+    height: 595px;
+    width: 842px;
+    background: white;
+    margin: auto;
+
+}
+.head{
+    background-color: #313C4E;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    padding: 20px 30px;
+    font-weight: 800;
+}
+.head textarea{
+    color: white;
+    border: 0;  
+    outline: 0;
+}
+#filefeild{
+    display: none;
+}
+.img {
+    height: 130px;
+    width: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+   
+    margin-left: 30px;
+  }
+  #name{
+    font-size: 30px;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+  #name::placeholder{
+      color: white;
+  }
+  #profession::placeholder{
+    color: #449399;
+  }
+  #profession{
+      font-size: 20px;
+      color: #449399;
+      margin-bottom: 10px;
+      
+  }
+  #profession:focus{
+    border-bottom: 1px solid;
+  }
+  #about{
+      color: white;
+   
+  }
+  #about::placeholder{
+      color: white;
+  }
+  .info{
+      background: #222A33;
+  }
