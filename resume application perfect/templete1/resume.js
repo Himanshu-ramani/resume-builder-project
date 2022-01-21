@@ -127,325 +127,49 @@ function checkedfeild(){
   }
 }
 ///////////////////
-const skillContainer = document.getElementById("skill-container")
-const addbtn = document.getElementsByClassName("skill-btn-add")
-function addli(){
-  html =`
-  <li class="skilldes"><textarea  name="" id="" class="skills" cols="45" rows="1" placeholder="Skill" oninput="auto_grow(this)" ></textarea>  <button class="skill-btn-add" onclick="addli()" >+</button> <button class="subskill" onclick="subli()">-</button>
-  </li>`
-  skillContainer.insertAdjacentHTML("beforeend",html)
-}
-// sub skills
-function subli(){
-  event.target.parentElement.style.display="none"
-}
-function subcompany(){
-  company = event.target.parentElement
-  company.style.display="none"
-}
-//////////
+const experinceContent = document.querySelector("#exp-cont").outerHTML
+const page = document.getElementById("page")
 
- const expCointer = document.getElementsByClassName("exp-container")[0]
- function addExp(){
-   html =`  <div class="experince" id="exp-cont" >
-    <button id="btn-exp" class="sub-company" onclick="subcompany()">-</button>
-    <button id="btn-exp" class="add-company" onclick="addExp()" >+</button>
- <h2 class='edit'><input type="text"   placeholder="compnay"  name="" class="compnay"  > <input type="text"  placeholder="post" name="" class="comp-post"></h2>
- <!-- <input type="month" placeholder="" value="2019-05"  class="duration"  name="foo"> -->
- <select id='gMonth2' style=" min-width: 22px; max-width: 30px; -webkit-appearance: none; color:rgba(0, 0, 0, 0.582) " onchange="show_month()">
-   <option selected value=''>mm/</option>
-   <option value='1'>JAN.</option>
-   <option value='2'>FEB.</option>
-   <option value='3'>MAR.</option>
-   <option value='4'>APR.</option>
-   <option value='5'>MAY.</option>
-   <option value='6'>JUN.</option>
-   <option value='7'>JUL.</option>
-   <option value='8'>AUG.</option>
-   <option value='9'>SEP.</option>
-   <option value='10'>OCT.</option>
-   <option value='11'>NOV.</option>
-   <option value='12'>DEC.</option>
-   </select><span style=" color:rgba(0, 0, 0, 0.582)">,</span><select id="year" name="year" style="-webkit-appearance: none; width: 28px !important; color:rgba(0, 0, 0, 0.582); ">
-   <option>yyyy</option>
-   <option value="1957">1957</option>
-   <option value="1958">1958</option>
-   <option value="1959">1959</option>
-   <option value="1960">1960</option>
-   <option value="1961">1961</option>
-   <option value="1962">1962</option>
-   <option value="1963">1963</option>
-   <option value="1964">1964</option>
-   <option value="1965">1965</option>
-   <option value="1966">1966</option>
-   <option value="1967">1967</option>
-   <option value="1968">1968</option>
-   <option value="1969">1969</option>
-   <option value="1970">1970</option>
-   <option value="1971">1971</option>
-   <option value="1972">1972</option>
-   <option value="1973">1973</option>
-   <option value="1974">1974</option>
-   <option value="1975">1975</option>
-   <option value="1976">1976</option>
-   <option value="1977">1977</option>
-   <option value="1978">1978</option>
-   <option value="1979">1979</option>
-   <option value="1980">1980</option>
-   <option value="1981">1981</option>
-   <option value="1982">1982</option>
-   <option value="1983">1983</option>
-   <option value="1984">1984</option>
-   <option value="1985">1985</option>
-   <option value="1986">1986</option>
-   <option value="1987">1987</option>
-   <option value="1988">1988</option>
-   <option value="1989">1989</option>
-   <option value="1990">1990</option>
-   <option value="1991">1991</option>
-   <option value="1992">1992</option>
-   <option value="1993">1993</option>
-   <option value="1994">1994</option>
-   <option value="1995">1995</option>
-   <option value="1996">1996</option>
-   <option value="1997">1997</option>
-   <option value="1998">1998</option>
-   <option value="1999">1999</option>
-   <option value="2000">2000</option>
-   <option value="2001">2001</option>
-   <option value="2002">2002</option>
-   <option value="2003">2003</option>
-   <option value="2004">2004</option>
-   <option value="2005">2005</option>
-   <option value="2006">2006</option>
-   <option value="2007">2007</option>
-   <option value="2008">2008</option>
-   <option value="2009">2009</option>
-   <option value="2010">2010</option>
-   <option value="2011">2011</option>
-   <option value="2012">2012</option>
-   <option value="2013">2013</option>
-   <option value="2014">2014</option>
-   <option value="2015">2015</option>
-   <option value="2016">2016</option>
-   <option value="2017">2017</option>
-   <option value="2018">2018</option>
-   <option value="2019">2019</option>
-   <option value="2020">2020</option>
-   <option value="2021">2021</option>
-</select><span style=" color:rgba(0, 0, 0, 0.582)">- </span><span style="color:rgba(0, 0, 0, 0.582)" class="present-span"><select id='gMonth2' style=" min-width: 22px; max-width: 30px; -webkit-appearance: none; color:rgba(0, 0, 0, 0.582) ">
- <option selected value=''>mm/</option>
- <option  value='1' style="width:22px">JAN.</option>
- <option value='2'>FEB.</option>
- <option value='3'style="width:30px" >MAR.</option>
- <option value='4'>APR.</option>
- <option value='5'>MAY.</option>
- <option value='6'>JUN.</option>
- <option value='7'>JUL.</option>
- <option value='8'>AUG.</option>
- <option value='9'>SEP.</option>
- <option value='10'>OCT.</option>
- <option value='11'>NOV.</option>
- <option value='12'>DEC.</option>
- </select><span style=" color:rgba(0, 0, 0, 0.582)">,</span><select id="year" name="year" style="-webkit-appearance: none; width: 28px !important; color:rgba(0, 0, 0, 0.582); ">
- <option>yyyy</option>
- <option value="1957">1957</option>
- <option value="1958">1958</option>
- <option value="1959">1959</option>
- <option value="1960">1960</option>
- <option value="1961">1961</option>
- <option value="1962">1962</option>
- <option value="1963">1963</option>
- <option value="1964">1964</option>
- <option value="1965">1965</option>
- <option value="1966">1966</option>
- <option value="1967">1967</option>
- <option value="1968">1968</option>
- <option value="1969">1969</option>
- <option value="1970">1970</option>
- <option value="1971">1971</option>
- <option value="1972">1972</option>
- <option value="1973">1973</option>
- <option value="1974">1974</option>
- <option value="1975">1975</option>
- <option value="1976">1976</option>
- <option value="1977">1977</option>
- <option value="1978">1978</option>
- <option value="1979">1979</option>
- <option value="1980">1980</option>
- <option value="1981">1981</option>
- <option value="1982">1982</option>
- <option value="1983">1983</option>
- <option value="1984">1984</option>
- <option value="1985">1985</option>
- <option value="1986">1986</option>
- <option value="1987">1987</option>
- <option value="1988">1988</option>
- <option value="1989">1989</option>
- <option value="1990">1990</option>
- <option value="1991">1991</option>
- <option value="1992">1992</option>
- <option value="1993">1993</option>
- <option value="1994">1994</option>
- <option value="1995">1995</option>
- <option value="1996">1996</option>
- <option value="1997">1997</option>
- <option value="1998">1998</option>
- <option value="1999">1999</option>
- <option value="2000">2000</option>
- <option value="2001">2001</option>
- <option value="2002">2002</option>
- <option value="2003">2003</option>
- <option value="2004">2004</option>
- <option value="2005">2005</option>
- <option value="2006">2006</option>
- <option value="2007">2007</option>
- <option value="2008">2008</option>
- <option value="2009">2009</option>
- <option value="2010">2010</option>
- <option value="2011">2011</option>
- <option value="2012">2012</option>
- <option value="2013">2013</option>
- <option value="2014">2014</option>
- <option value="2015">2015</option>
- <option value="2016">2016</option>
- <option value="2017">2017</option>
- <option value="2018">2018</option>
- <option value="2019">2019</option>
- <option value="2020">2020</option>
- <option value="2021">2021</option>
-</select></span><span class="present"><input type="checkbox" name="" id="" class="present-checkbox" onclick="present()"> <label for="present-checkbox" style="color: rgba(0, 0, 0, 0.582);">present</label></span>
- <ul class="exp-container">
-   <li class="skilldes"><textarea oninput="auto_grow(this)" name="" id="" placeholder="Work Experince" cols="45" rows="1" class="skills"></textarea>
-     <!-- <button class="subskill" onclick="subli()">-</button>  -->
-      <button id="btn-exp" class="skill-btn-add" onclick="addexp()">+</button> </li>
- </ul>
-</div>`
-expCointer.insertAdjacentHTML("beforeend",html)
- }
-//////////////////////////////////
-function present(){
-  if (event.target.checked) {
-    span = event.target.previousElementSibling
-    // console.log(span);
-    span.innerHTML="Paresnt"
-  } else {
-    html =`<select id='gMonth2' style=" min-width: 22px; max-width: 30px; -webkit-appearance: none; color:rgba(0, 0, 0, 0.582) ">
-    <option selected value=''>mm/</option>
-    <option  value='1' style="width:22px">JAN.</option>
-    <option value='2'>FEB.</option>
-    <option value='3'style="width:30px" >MAR.</option>
-    <option value='4'>APR.</option>
-    <option value='5'>MAY.</option>
-    <option value='6'>JUN.</option>
-    <option value='7'>JUL.</option>
-    <option value='8'>AUG.</option>
-    <option value='9'>SEP.</option>
-    <option value='10'>OCT.</option>
-    <option value='11'>NOV.</option>
-    <option value='12'>DEC.</option>
-    </select><span style=" color:rgba(0, 0, 0, 0.582)">,</span><select id="year" name="year" style="-webkit-appearance: none; width: 28px !important; color:rgba(0, 0, 0, 0.582); ">
-    <option>yyyy</option>
-    <option value="1957">1957</option>
-    <option value="1958">1958</option>
-    <option value="1959">1959</option>
-    <option value="1960">1960</option>
-    <option value="1961">1961</option>
-    <option value="1962">1962</option>
-    <option value="1963">1963</option>
-    <option value="1964">1964</option>
-    <option value="1965">1965</option>
-    <option value="1966">1966</option>
-    <option value="1967">1967</option>
-    <option value="1968">1968</option>
-    <option value="1969">1969</option>
-    <option value="1970">1970</option>
-    <option value="1971">1971</option>
-    <option value="1972">1972</option>
-    <option value="1973">1973</option>
-    <option value="1974">1974</option>
-    <option value="1975">1975</option>
-    <option value="1976">1976</option>
-    <option value="1977">1977</option>
-    <option value="1978">1978</option>
-    <option value="1979">1979</option>
-    <option value="1980">1980</option>
-    <option value="1981">1981</option>
-    <option value="1982">1982</option>
-    <option value="1983">1983</option>
-    <option value="1984">1984</option>
-    <option value="1985">1985</option>
-    <option value="1986">1986</option>
-    <option value="1987">1987</option>
-    <option value="1988">1988</option>
-    <option value="1989">1989</option>
-    <option value="1990">1990</option>
-    <option value="1991">1991</option>
-    <option value="1992">1992</option>
-    <option value="1993">1993</option>
-    <option value="1994">1994</option>
-    <option value="1995">1995</option>
-    <option value="1996">1996</option>
-    <option value="1997">1997</option>
-    <option value="1998">1998</option>
-    <option value="1999">1999</option>
-    <option value="2000">2000</option>
-    <option value="2001">2001</option>
-    <option value="2002">2002</option>
-    <option value="2003">2003</option>
-    <option value="2004">2004</option>
-    <option value="2005">2005</option>
-    <option value="2006">2006</option>
-    <option value="2007">2007</option>
-    <option value="2008">2008</option>
-    <option value="2009">2009</option>
-    <option value="2010">2010</option>
-    <option value="2011">2011</option>
-    <option value="2012">2012</option>
-    <option value="2013">2013</option>
-    <option value="2014">2014</option>
-    <option value="2015">2015</option>
-    <option value="2016">2016</option>
-    <option value="2017">2017</option>
-    <option value="2018">2018</option>
-    <option value="2019">2019</option>
-    <option value="2020">2020</option>
-    <option value="2021">2021</option>
-</select>`
-span = event.target.previousElementSibling
-console.log(span);
-span.innerHTML=html
+function setFontFirst(){
+  page.style.fontFamily = "'Cookie'"
+  console.log(page);
+}
+function setDefaultFont(){
+  page.style.fontFamily = `Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol"`
+  console.log(page);
+}
+function setFontSecond(){
+  page.style.fontFamily = `'Josefin Sans'`
+  console.log(page);
+}
+function clear(event){
+  console.log("hi");
+  console.log(event.target);
+}
 
-  }
+
+
+
+
+function addExperince(){
+  document.getElementsByClassName('exp-container')[0].insertAdjacentHTML("beforeend",experinceContent)
 }
-////////
-function addexp(){
-  html = `     <li class="skilldes"><textarea oninput="auto_grow(this)" name="" id="" placeholder="Work Experince" cols="45" rows="1" class="skills"></textarea>
-  <button class="subskill" onclick="subli()">-</button> 
-   <button id="btn-exp" class="skill-btn-add" onclick="addexp()">+</button> </li>`
-   event.target.parentElement.parentElement.insertAdjacentHTML("beforeEnd",html)
-}
+
+
 ///////////////
 const btnPdf = document.getElementById("pdf-btn");
 const presentc = document.getElementsByClassName("present")
 const addmore = document.getElementById("add-more")
 const presentb = document.getElementsByClassName("box")
+
 btnPdf.addEventListener("click", function (e) {
   e.preventDefault();
+  page.style.margin = 0
+
 window.print()
-  // let node = document.getElementById("page");
-
-  // // node.style.display ="block"
-  // // node.style.margin =0
-
-  // html2pdf(node,{
-  //   margin:       0,
-  //   filename:     'myresume.pdf',
-  //   image:        { type: 'jpeg', quality: 0.98 },
-  //   html2canvas:  { scale: 4},
-  //   jsPDF:        {  format: 'a4', orientation: 'portrait' }
-  // })
-
+page.style.margin = "30px auto"
 });
 
 //////////////////////////////////////////
