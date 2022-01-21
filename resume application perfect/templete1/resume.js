@@ -416,24 +416,25 @@ function addexp(){
    event.target.parentElement.parentElement.insertAdjacentHTML("beforeEnd",html)
 }
 ///////////////
-const btnPdf = document.getElementById("pdf-div");
+const btnPdf = document.getElementById("pdf-btn");
 const presentc = document.getElementsByClassName("present")
 const addmore = document.getElementById("add-more")
 const presentb = document.getElementsByClassName("box")
 btnPdf.addEventListener("click", function (e) {
   e.preventDefault();
+window.print()
+  // let node = document.getElementById("page");
 
-  let node = document.getElementById("header");
-  // node.style.display ="block"
-  // node.style.margin =0
+  // // node.style.display ="block"
+  // // node.style.margin =0
 
-  html2pdf(node,{
-    margin:       0,
-    filename:     'myresume.pdf',
-    image:        { type: 'jpeg', quality: 0.98 },
-    html2canvas:  { scale: 4},
-    jsPDF:        {  format: 'a4', orientation: 'portrait' }
-  })
+  // html2pdf(node,{
+  //   margin:       0,
+  //   filename:     'myresume.pdf',
+  //   image:        { type: 'jpeg', quality: 0.98 },
+  //   html2canvas:  { scale: 4},
+  //   jsPDF:        {  format: 'a4', orientation: 'portrait' }
+  // })
 
 });
 
