@@ -154,22 +154,81 @@ function clear(event){
 
 
 function addExperince(){
+
   document.getElementsByClassName('exp-container')[0].insertAdjacentHTML("beforeend",experinceContent)
 }
 
+///
+const heading = document.getElementsByClassName("heading")
+const edcutionContainer = document.getElementsByClassName("eduction")[0]
+const edcution = document.getElementsByClassName("edcution-content")[0].outerHTML
+function setTitleDefault(){
 
+  heading.forEach(element => {
+
+    element.style.textTransform = "capitalize";
+  });
+
+}
+
+function setTitleUpperCase(){
+  heading.forEach(element => {
+
+    element.style.textTransform = "uppercase";
+  });
+}
+function addEduction(){
+  console.log();
+  edcutionContainer.insertAdjacentHTML("beforeend",edcution)
+}
+
+
+function addProject(){
+
+}
+
+
+
+
+
+
+
+//////////////////////////////////
+function present(){
+  // event.preventDefault()
+  if (event.target.checked) {
+    span = event.target.previousElementSibling
+    console.log(span);
+    span.innerHTML="Present"
+    
+  } else {
+    html = document.getElementById("month")
+span = event.target.previousElementSibling
+console.log(span);
+// span.innerHTML=html
+
+  }
+}
+////////
+function addexp(){
+  html = `     <li class="skilldes"><textarea oninput="auto_grow(this)" name="" id="" placeholder="Work Experince" cols="45" rows="1" class="skills"></textarea>
+  <button class="subskill" onclick="subli()">-</button> 
+   <button id="btn-exp" class="skill-btn-add" onclick="addexp()">+</button> </li>`
+   event.target.parentElement.parentElement.insertAdjacentHTML("beforeEnd",html)
+}
 ///////////////
 const btnPdf = document.getElementById("pdf-btn");
 const presentc = document.getElementsByClassName("present")
 const addmore = document.getElementById("add-more")
 const presentb = document.getElementsByClassName("box")
-
 btnPdf.addEventListener("click", function (e) {
   e.preventDefault();
-  page.style.margin = 0
+
+page.style.margin = 0
 
 window.print()
 page.style.margin = "30px auto"
+
 });
 
 //////////////////////////////////////////

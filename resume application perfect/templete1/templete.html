@@ -78,19 +78,19 @@
         <p>Layout</p>
         <div class="button-container"><button>1</button> <button>2</button></div>
         <p>Tittle case</p>
-        <div class="button-container"><button>Default</button> <button>UpperCase</button></div>
+        <div class="button-container"><button onclick="setTitleDefault()">Default</button> <button onclick="setTitleUpperCase()">UpperCase</button></div>
       </div>
       <div class="colum-add">
         <p>Add Contact Item</p>
-        <div class="button-container"><button id="add-more">Add more</button></div>
+        <div class="button-container"><button id="add-more">Add</button></div>
       </div>
       <div class="add-content">
         <p>Education</p>
-        <div class="button-container"> <button >+</button> <button>-</button> </div>
+        <div class="button-container"> <button onclick="addEduction()">+</button>  </div>
         <p>Work Experince</p>
         <div class="button-container"> <button onclick="addExperince()">+</button></div>
         <p>Project</p>
-        <div class="button-container"> <button>+</button> <button>-</button> </div>
+        <div class="button-container"> <button onclick="addroject()">+</button>  </div>
       </div>
     </div>
 
@@ -106,12 +106,12 @@
       <div class="info">
         <section class="first">
           <div class="profile">
-            <h1 class="heading">PERSONAL PROFILE</h1>
+            <h1 class="heading">Personal profile</h1>
             <div class="underline"></div>
             <div class="test" placeholder="About Yourself..." contenteditable="true"></div>
           </div>
           <div class="contact">
-            <h1 class="heading">CONTACT</h1>
+            <h1 class="heading">contact</h1>
             <div class="underline"></div>
             <p id="addressp">
               <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;&nbsp;
@@ -155,9 +155,10 @@
             </p>
             
           </div>
-          <h1 class="heading">EDUCATION</h1>
+          <h1 class="heading">Education</h1>
           <div class="underline"></div>
           <div class="eduction">
+            <div class="edcution-content">
             <p class='edit'>
               <i class="fa fa-institution" aria-hidden="true"></i>&nbsp;&nbsp;<input type="text"
                 placeholder="University" name="" class="collage" id="">
@@ -167,10 +168,11 @@
                 placeholder="Degree" name="" id="">
             </p>
           </div>
+          </div>
         </section>
         <section class="second">
           <div class="skill">
-            <h1 class="heading">SKILLS</h1>
+            <h1 class="heading">Skills</h1>
             <div class="underline"></div>
 
             <ul id="skill-container" contenteditable="">
@@ -178,14 +180,17 @@
 
             </ul>
           </div>
-          <h1 class="heading">WORK EXPERINCE</h1>
+          <h1 class="heading">work experince</h1>
           <div class="underline"></div>
           <div class="exp-container">
             <div contenteditable="true" class="experince" id="exp-cont">
 
-              <h2 class='edit'><input type="text" placeholder="compnay" name="" class="compnay"> <input type="text"
+              <h2 class='test' contenteditable="true" placeholder="Compnay"> 
+                <div class="test" placeholder="Compnay" contenteditable="true" ></div>
+                <!-- <input type="text" placeholder="compnay" name="" class="compnay">  -->
+                <input type="text"
                   placeholder="post" name="" class="comp-post"></h2>
-
+<span id="month">
               <select id='gMonth2'
                 style=" min-width: 22px; max-width: 30px; -webkit-appearance: none; color:rgba(0, 0, 0, 0.582) "
                 onchange="show_month()">
@@ -354,8 +359,12 @@
                   <option value="2019">2019</option>
                   <option value="2020">2020</option>
                   <option value="2021">2021</option>
-                </select></span> <input type="checkbox" name="" id="" class="present-checkbox box no-print" onclick="present()">
+                </span>
+                </select>
+              </span> <input type="checkbox"  name="" id="" class="present-checkbox box no-print" onclick="present()">
+                 </span>
               <label for="present-checkbox" class="box no-print" style="color: rgba(0, 0, 0, 0.582);">Present</label>
+           
               <ul id="skill-container"  >
                 <li> <div class="test" placeholder="Experince" contenteditable="true"></div></li>
                 
@@ -364,19 +373,14 @@
           </div>
           <h1 class="heading">Project</h1>
           <div class="underline"></div>
-          <div class="exp-container">
-            <div class="experince" id="exp-cont">
-
-              <button id="btn-exp" class="add-company" onclick="addExp()">+</button>
-              <h2 class='edit'><input type="text" placeholder="Project" name="" class="compnay"> </h2>
+          <div class="Project">
+            <div  id="project-content">
+              <div class="test compnay"  placeholder="Project" contenteditable="true"></div>
+         
 
          
               <ul class="exp-container" >
-                <li class="skilldes"><textarea name="" id="" placeholder="Work Experince" cols="45" rows="1"
-                    class="skills"></textarea>
-
-                  <button id="btn-exp" class="skill-btn-add" onclick="addexp()">+</button>
-                  <li contenteditable="true" style="width: 100px;"> hi</li>
+                <li> <div class="test" placeholder="Project infomation" contenteditable="true"></div></li>
                 </li>
               </ul>
             </div>
