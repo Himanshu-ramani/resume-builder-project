@@ -20,6 +20,16 @@ imginput.addEventListener("change", function (e) {
   imgf.setAttribute("src", tempUrl);
 
 });
+
+////////////
+//img toggle//
+const imgShow = document.getElementById("img-lable")
+function showImg(){
+  imgShow.style.display = "inline-block"
+}
+function hideImg(){
+  imgShow.style.display = "none"
+}
 ///////////////////////////
 for (let i = 0; i < tx.length; i++) {
   tx[i].setAttribute(

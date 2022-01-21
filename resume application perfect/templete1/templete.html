@@ -58,26 +58,48 @@
   <div class="full-page">
     <div class="navigation no-print">
       <h1>MY RESUME</h1>
+      <div class="pdf-container">
 
-      <a href="#" id="pdf-btn" rel="noopener noreferrer">Save PDF</a>
+        <a href="#" id="pdf-btn" rel="noopener noreferrer">Save PDF</a>
+      </div>
       <div class="underline-nav"></div>
       <h2>Templete Setting</h2>
       <div class="items">
-        <h3>Contact Item</h3>
-        <div class="button-container"><button>add item</button></div>
-        <h3>Horizotal margin</h3>
+       
+        <p>Horizotal margin</p>
         <div class="button-container"><button>1</button> <button>2</button> <button>3</button></div>
-        <h3>line Spacing</h3>
+        <p>line Spacing</p>
         <div class="button-container"><button>1</button> <button>2</button> <button>3</button></div>
-        <h3>Font style</h3>
+       
+        <p>Font style</p>
         <div class="button-container"><button>1</button> <button>2</button> <button>3</button></div>
-        <h3>Image</h3>
-        <div class="button-container"><button>Hhow</button> <button>Hide</button></div>
+        <p>Image</p>
+        <div class="button-container"><button onclick="showImg()">Show</button> <button onclick="hideImg()">Hide</button></div>
+        <p>Layout</p>
+        <div class="button-container"><button>1</button> <button>2</button></div>
+        <p>Tittle case</p>
+        <div class="button-container"><button>Default</button> <button>UpperCase</button></div>
+      </div>
+      <div class="colum-add">
+        <p>Add Contact Item</p>
+        <div class="button-container"><button id="add-more">Add more</button></div>
+        <p>Add section</p>
+        <div class="button-container"><button>Add Item</button></div>
+      </div>
+      <div class="add-content">
+        <p>Education</p>
+        <div class="button-container"> <button>+</button> <button>-</button> </div>
+        <p>skill</p>
+        <div class="button-container"> <button>+</button> <button>-</button> </div>
+        <p>Work Experince</p>
+        <div class="button-container"> <button>+</button> <button>-</button> </div>
+        <p>Project</p>
+        <div class="button-container"> <button>+</button> <button>-</button> </div>
       </div>
     </div>
     <div class="page" id="page">
       <header id="header">
-        <label for="filefeild"> <img class="img" src="./profile.jpg" alt="" srcset="" id="img-f" /></label>
+        <label for="filefeild" id="img-lable"> <img class="img" src="./profile.jpg" alt="" srcset="" id="img-f" /></label>
         <input type="file" name="" id="filefeild" class="file">
         <div class="name">
           <h1 class='bigname' id="bigname"><input type="text" class="bigname" placeholder="NAME" name="" id=""></h1>
@@ -137,7 +159,7 @@
 
               <input type="text" class="linkedin" placeholder="Linked in" name="" id=""></a>
             </p>
-            <button id="add-more">Add more</button>
+            
           </div>
           <h1 class="heading">EDUCATION</h1>
           <div class="underline"></div>
@@ -340,13 +362,33 @@
                   <option value="2019">2019</option>
                   <option value="2020">2020</option>
                   <option value="2021">2021</option>
-                </select></span> <input type="checkbox" name="" id="" class="present-checkbox box" onclick="present()">
-              <label for="present-checkbox" class="box" style="color: rgba(0, 0, 0, 0.582);">present</label>
-              <ul class="exp-container">
+                </select></span> <input type="checkbox" name="" id="" class="present-checkbox box no-print" onclick="present()">
+              <label for="present-checkbox" class="box no-print" style="color: rgba(0, 0, 0, 0.582);">present</label>
+              <ul class="exp-container" >
                 <li class="skilldes"><textarea name="" id="" placeholder="Work Experince" cols="45" rows="1"
                     class="skills"></textarea>
 
                   <button id="btn-exp" class="skill-btn-add" onclick="addexp()">+</button>
+                  <li contenteditable="true" style="width: 100px;"> hi</li>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <h1 class="heading">Project</h1>
+          <div class="underline"></div>
+          <div class="exp-container">
+            <div class="experince" id="exp-cont">
+
+              <button id="btn-exp" class="add-company" onclick="addExp()">+</button>
+              <h2 class='edit'><input type="text" placeholder="Project" name="" class="compnay"> </h2>
+
+         
+              <ul class="exp-container" >
+                <li class="skilldes"><textarea name="" id="" placeholder="Work Experince" cols="45" rows="1"
+                    class="skills"></textarea>
+
+                  <button id="btn-exp" class="skill-btn-add" onclick="addexp()">+</button>
+                  <li contenteditable="true" style="width: 100px;"> hi</li>
                 </li>
               </ul>
             </div>
