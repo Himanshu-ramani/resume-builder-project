@@ -147,7 +147,24 @@ function showImg(){
 function hideImg(){
   imgShow.style.display = "none"
 }
-///
+//////
+function setFontFirst() {
+  page.style.fontFamily = "'Cookie'";
+  console.log(page);
+}
+function setDefaultFont() {
+  page.style.fontFamily = `Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol"`;
+  console.log(page);
+}
+function setFontSecond() {
+  page.style.fontFamily = `'Josefin Sans'`;
+  console.log(page);
+}
+
+
+
 //pdf
 
 const addMore = document.getElementById("add-more")

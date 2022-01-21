@@ -3,9 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
+
   background: transparent;
   border: none;
   outline: none;
@@ -20,33 +18,16 @@
   body {
     margin: auto;
   }
-	/* #left , #right {
-		overflow: initial;
-		min-height: initial;
-		height: initial;
-		position: relative;
-		margin-top: 0px;
-	}
 
-	.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 { float: left; }
-	.col-sm-12 { width: 100%; }
-	.col-sm-11 { width: 91.66666667%; }
-	.col-sm-10 { width: 83.33333333%; }
-	.col-sm-9 { width: 75%; }
-	.col-sm-8 { width: 66.66666667%; }
-	.col-sm-7 { width: 58.33333333%; }
-	.col-sm-6 { width: 50%; }
-	.col-sm-5 { width: 41.66666667%; }
-	.col-sm-4 { width: 33.33333333%; }
-	.col-sm-3 { width: 25%; }
-	.col-sm-2 { width: 16.66666667%; }
-	.col-sm-1 { width: 8.33333333%; } */
 }
 
 
 .full-page{
   display: grid;
   grid-template-columns: 1.7fr 5fr ;
+  font-family :Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
 }
 .navigation{
   background-color: #E7E9EB;
@@ -56,6 +37,9 @@
 .pdf-container{
   display: flex;
   justify-content: center;
+}
+.navigation{
+  line-height: 30px;
 }
 .navigation h1, .navigation h2{
  text-align: center;
@@ -73,11 +57,17 @@
 
   /* font-size: 16px; */
 }
+.navigation h5{
+  text-align: center;
+  margin-top: 30px;
+}
 .items{
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-
+.skills{
+  margin-bottom: 20px;
+}
 .button-container{
   text-align: right;
 }
@@ -131,12 +121,6 @@ padding: 2px 6px;
   padding: 2px 8px;
   left: -19px
   ;
-}
-.container:hover .add {
-  display: inherit;
-}
-.container:hover .sub {
-  display: inherit;
 }
 
 /* css of form */
@@ -227,9 +211,17 @@ input{
 .duration,
 .company{
   font-weight: 600;
-  width: 70px;
-  font-size: 1rem;
+  width: 230px;
+  font-size: 1.3rem;
   text-transform: capitalize;
+}
+.one{
+  width: 365px;
+  /* overflow: hidden; */
+}
+.two{
+  width: 365px;
+  /* overflow: hidden; */
 }
 .heading{
   color: #00fff5;
@@ -317,16 +309,7 @@ button{
   padding: 2px 5px;
   cursor: pointer;
 }
-/* #add-more{
-  background: rgba(128, 128, 128, 0.479);
-  padding: 2px 5px;
-  margin-left: 13px;
-} */
 
-/* .container:hover{
-  border: 2px dotted grey;
-  padding: 2px;
-} */
 
 .li{
   position: relative;
@@ -337,4 +320,12 @@ button{
   position: absolute;
   top: -9px;
   right: 32px;
+}
+
+.test[placeholder]:empty:before {
+  content: attr(placeholder);
+  color: #555; 
+}
+.container{
+  width: 350px;
 }
