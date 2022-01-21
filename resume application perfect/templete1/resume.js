@@ -1,6 +1,39 @@
-// const { default: jsPDF } = require("jspdf");
 
+const btnPdf = document.getElementById("pdf-btn");
+const presentc = document.getElementsByClassName("present")
+const addmore = document.getElementById("add-more")
+const presentb = document.getElementsByClassName("box")
 const tx = document.getElementsByTagName("textarea");
+const imginput = document.getElementById("filefeild");
+const imgf = document.getElementById("img-f");
+const overlay = document.getElementsByClassName("overlay")[0]
+const Close =document.getElementsByClassName("check-feild")[0]
+const addfeild = document.getElementById("add-more")
+const addressp =document.getElementById("addressp")
+const addressB =document.getElementById("addressB")
+const emailCheckBox =document.getElementById("Email-check")
+const emailp =document.getElementById("emailp")
+const numberCheckBox =document.getElementById("number-check")
+const numberp =document.getElementById("numberp")
+const websiteCheckBox =document.getElementById("website-check")
+const websitep =document.getElementById("websitep")
+const linkedinCheckBox =document.getElementById("linkedin-check")
+const linkedinp =document.getElementById("linkedinp")
+const twitterCheckBox =document.getElementById("twitter-check")
+const twitterp =document.getElementById("twitterp")
+const githubCheckBox =document.getElementById("github-check")
+const githubp =document.getElementById("githubp")
+const facebookCheckBox =document.getElementById("facebook-check")
+const facebookp =document.getElementById("facebookp")
+const instagramCheckBox =document.getElementById("instagram-check")
+const instagramp =document.getElementById("instagramp")
+const experinceContent = document.querySelector("#exp-cont").outerHTML
+const page = document.getElementById("page")
+const heading = document.getElementsByClassName("heading")
+const edcutionContainer = document.getElementsByClassName("eduction")[0]
+const edcution = document.getElementsByClassName("edcution-content")[0].outerHTML
+const input = document.getElementsByTagName("input");
+///////////
 function OnInput() {
   this.style.height = "auto";
   this.style.height = this.scrollHeight + "px";
@@ -8,8 +41,7 @@ function OnInput() {
 
 //////////////////////////////
 ///input photo///
-const imginput = document.getElementById("filefeild");
-const imgf = document.getElementById("img-f");
+
 // const imgtemp = document.getElementById("imgtemp");
 imginput.addEventListener("change", function (e) {
   if (e.target.files.length == 0) {
@@ -43,9 +75,7 @@ function auto_grow(element) {
   element.style.height = (element.scrollHeight)+"px";
 }
 ////
-const overlay = document.getElementsByClassName("overlay")[0]
-const Close =document.getElementsByClassName("check-feild")[0]
-const addfeild = document.getElementById("add-more")
+
 addfeild.addEventListener("click",function(){
   overlay.style.display = "inherit"
  Close.style.display ="grid"
@@ -56,24 +86,7 @@ document.getElementById("close").addEventListener("click",function(){
 })
 ///////////////
 
-const addressp =document.getElementById("addressp")
-const addressB =document.getElementById("addressB")
-const emailCheckBox =document.getElementById("Email-check")
-const emailp =document.getElementById("emailp")
-const numberCheckBox =document.getElementById("number-check")
-const numberp =document.getElementById("numberp")
-const websiteCheckBox =document.getElementById("website-check")
-const websitep =document.getElementById("websitep")
-const linkedinCheckBox =document.getElementById("linkedin-check")
-const linkedinp =document.getElementById("linkedinp")
-const twitterCheckBox =document.getElementById("twitter-check")
-const twitterp =document.getElementById("twitterp")
-const githubCheckBox =document.getElementById("github-check")
-const githubp =document.getElementById("githubp")
-const facebookCheckBox =document.getElementById("facebook-check")
-const facebookp =document.getElementById("facebookp")
-const instagramCheckBox =document.getElementById("instagram-check")
-const instagramp =document.getElementById("instagramp")
+
 function checkedfeild(){
   if (addressB.checked == true) {
     addressp.style.display ="inherit"
@@ -127,8 +140,7 @@ function checkedfeild(){
   }
 }
 ///////////////////
-const experinceContent = document.querySelector("#exp-cont").outerHTML
-const page = document.getElementById("page")
+
 
 function setFontFirst(){
   page.style.fontFamily = "'Cookie'"
@@ -159,9 +171,7 @@ function addExperince(){
 }
 
 ///
-const heading = document.getElementsByClassName("heading")
-const edcutionContainer = document.getElementsByClassName("eduction")[0]
-const edcution = document.getElementsByClassName("edcution-content")[0].outerHTML
+
 function setTitleDefault(){
 
   heading.forEach(element => {
@@ -182,9 +192,11 @@ function addEduction(){
   edcutionContainer.insertAdjacentHTML("beforeend",edcution)
 }
 
-
+const projectConatiner = document.getElementsByClassName('project')[0]
+const project = document.getElementById("project-content").outerHTML
 function addProject(){
-
+projectConatiner.style.display = "inherit"
+projectConatiner.insertAdjacentHTML("beforeend",project)
 }
 
 
@@ -217,10 +229,7 @@ function addexp(){
    event.target.parentElement.parentElement.insertAdjacentHTML("beforeEnd",html)
 }
 ///////////////
-const btnPdf = document.getElementById("pdf-btn");
-const presentc = document.getElementsByClassName("present")
-const addmore = document.getElementById("add-more")
-const presentb = document.getElementsByClassName("box")
+
 btnPdf.addEventListener("click", function (e) {
   e.preventDefault();
 
@@ -232,7 +241,7 @@ page.style.margin = "30px auto"
 });
 
 //////////////////////////////////////////
-const input = document.getElementsByTagName("input");
+
 for (const ele of input) {
   ele.addEventListener(
     "input",

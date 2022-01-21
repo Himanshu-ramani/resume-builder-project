@@ -28,9 +28,47 @@
       <input type="checkbox" id="instagram-check" onclick="checkedfeild()"> <i class="fa fa-instagram" aria-hidden="true"></i> <label for="instagram-check">Instagram</label> <br>
       </div>
     </div>
+    <div class="full-page">
+      <div class="navigation no-print">
+        <h1>MY RESUME</h1>
+        <div class="pdf-container">
+  
+          <a href="#" id="pdf-btn" rel="noopener noreferrer">Save PDF</a>
+        </div>
+        <div class="underline-nav"></div>
+        <h2>Templete Setting</h2>
+        <div class="items">
+         
+          <p>Horizotal margin</p>
+          <div class="button-container"><button>1</button> <button>2</button> <button>3</button></div>
+          <!-- <p>line Spacing</p>
+          <div class="button-container"><button>1</button> <button>2</button> <button>3</button></div> -->
+         
+          <p>Font style</p>
+          <div class="button-container"><button onclick="setDefaultFont()">1</button> <button onclick="setFontFirst()">2</button> <button onclick="setFontSecond()">3</button></div>
+          <p>Image</p>
+          <div class="button-container"><button onclick="showImg()">Show</button> <button onclick="hideImg()">Hide</button></div>
+          <p>Layout</p>
+          <div class="button-container"><button>1</button> <button>2</button></div>
+          <p>Tittle case</p>
+          <div class="button-container"><button onclick="setTitleDefault()">Default</button> <button onclick="setTitleUpperCase()">UpperCase</button></div>
+        </div>
+        <div class="colum-add">
+          <p>Add Contact Item</p>
+          <div class="button-container"><button id="add-more">Add</button></div>
+        </div>
+        <div class="add-content">
+          <p>Education</p>
+          <div class="button-container"> <button onclick="addEduction()">+</button>  </div>
+          <p>Work Experince</p>
+          <div class="button-container"> <button onclick="addExperince()">+</button></div>
+          <p>Project</p>
+          <div class="button-container"> <button onclick="addProject()">+</button>  </div>
+        </div>
+      </div>
     <div class="from" id="form">
       <header>
-      <label for="filefeild">  <img class="img from-dp" src="./profile.jpg" alt="" srcset="" id="img-f" /></label>
+      <label for="filefeild" id="img-label">  <img class="img from-dp" src="./profile.jpg" alt="" srcset="" id="img-f" /></label>
       <input type="file" name="" id="filefeild" class="file">
       <div class="name">
           <p class="" id="from-big-name">
@@ -52,8 +90,6 @@
           <div class="heading">WORK  EXPERINCE</div>
           <div class="experinceConatiner" id="exp-container">
           <div class="container" id="cont"> 
-            <button class="btn add" id="full-exp" onclick="addcompnay()">+</button>
-            <!-- <button class="btn sub" id="sub" onclick="subCompany()">-</button> -->
             <select id="year" name="year" style="-webkit-appearance: none; width: 28px !important; color:black; font-weight: 600; ">
               <option>yyyy</option>
               <option value="1957">1957</option>
@@ -194,8 +230,7 @@
             <ul>
               <li class="li">
                 <textarea name="" id="" class="work-experince" cols="40" rows="1" placeholder="Work Experince"></textarea>
-                <!-- <button class="btn sub-li" id="subli" onclick="subli()">-</button> -->
-                 <button class="btn add-li" onclick="addli()">+</button></li>
+
             </ul>
             </div>
             <br>
@@ -243,15 +278,14 @@
                   <input type="text" class="linkedin" placeholder="Linked in" name="" id=""></a
                 >
               </p>
-          <button id="add-more">Add more</button>
+      
         </div>
         </section>
         <section class="two">
           <div class="heading">EDUCATION</div>
           <div class="eduction">
             <div class="container">
-              <button class="btn add" onclick="addcollage()">+</button>
-              <!-- <button class="btn sub" onclick="subcollage()">-</button> -->
+
               <select id="year" name="year" style="-webkit-appearance: none; width: 28px !important; color:black; font-weight: 600; ">
                 <option>yyyy</option>
                 <option value="1957">1957</option>
@@ -392,8 +426,7 @@
             <ul>
               
               <li class="li"><textarea oninput=" auto_grow(this)" name="" id="" class="work-experince" cols="40" rows="1" placeholder="Study"></textarea>
-                <!-- <button class="btn sub-li"onclick="subli()">-</button> -->
-                <button class="btn add-li" onclick="addstudy()">+</button></li>
+
             </ul>
           </div>
           <br>
@@ -402,8 +435,7 @@
           <div class="skills">
             <ul id="skill-container">
               <li class="li"><textarea name="" id="" cols="40" placeholder="skills" rows="1"></textarea>
-                <!-- <button class="btn sub-li" onclick="subli()">-</button> -->
-                <button class="btn add-li" onclick="addskill()">+</button></li>
+
             </ul>
           </div>
           <div class="heading">REFERENCE</div>
@@ -415,11 +447,9 @@
         </section>
       </div>
     </div>
+  </div>
    
-    <div class="preview">
-      <!-- <button class="btn-preview" id="btn-back"> Back</button> -->
-      <button class="btn-preview" id="btn-save"> Save</button>
-    </div>
+  
     <script src="./templete2.js"></script>
   </body>
 </html>

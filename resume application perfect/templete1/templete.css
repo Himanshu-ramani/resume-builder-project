@@ -186,10 +186,15 @@ header {
 }
 .second {
   background: rgba(128, 128, 128, 0.137);
-  padding: 30px;
+  padding: 30px !important;
   width: 550px;
+  height: 100%  ;
   
 }
+
+/* .project{
+  display: none;
+} */
 .heading {
   color: grey;
   font-weight: 550;
