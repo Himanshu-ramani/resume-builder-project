@@ -14,6 +14,28 @@
 </head>
 
 <body>
+
+  <div class="overlay"></div>
+  <div class="check-feild">
+    <div>
+      <span id="close">X</span>
+      <h3>PERSONAL</h3>
+      <input type="checkbox" checked id="addressB" onclick="checkedfeild()"> <i class="fa fa-map-marker"
+        aria-hidden="true"> &nbsp;&nbsp; </i><label for="">Address</label> <br>
+      <input type="checkbox" checked id="Email-check" onclick="checkedfeild()"> <i class="fa fa-envelope"
+        aria-hidden="true"></i> <label for="">E-mail</label> <br>
+      <input type="checkbox" checked id="number-check" onclick="checkedfeild()"> <i class="fa fa-phone"
+        aria-hidden="true"></i>&nbsp; <label for="">Phone Number</label> <br>
+    </div>
+    <div class="social">
+      <h3>SOCIAL</h3>
+      <input type="checkbox" id="website-check" onclick="checkedfeild()"> <i class="fa fa-globe" aria-hidden="true"></i>
+      <label for="website-check"> Website </label> <br>
+      <input type="checkbox" id="twitter-check" onclick="checkedfeild()"> <i class="fa fa-twitter"
+        aria-hidden="true"></i> <label for="twitter-check">Twitter</label> <br>
+      <input type="checkbox" id="linkedin-check" onclick="checkedfeild()"> <i class="fa fa-linkedin"
+        aria-hidden="true"></i> <label for="linkedin-check">linkedin</label> <br>
+      <input type="checkbox" id="github-check" onclick="checkedfeild()"> <i class="fa fa-github" aria-hidden="true"></i>
       <label for="github-check">Github</label> <br>
       <input type="checkbox" id="facebook-check" onclick="checkedfeild()"> <i class="fa fa-facebook" aria-hidden="true">
         &nbsp;</i> <label for="facebook-check"> Facebook</label> <br>
@@ -65,7 +87,10 @@
         <label for="filefeild" id="img-lable"> <img class="img" src="./profile.jpg" alt="" srcset="" id="img-f" /></label>
         <input type="file" name="" id="filefeild" class="file">
         <div class="name">
-          <h1 class='bigname' id="bigname"><input type="text" class="bigname" placeholder="NAME" name="" id=""></h1>
+          <h1 class='bigname' id="bigname">
+            <!-- <input type="text" class="bigname" placeholder="NAME" name="" id=""> -->
+            <div class="test bigname" placeholder="NAME" contenteditable="true"></div>
+          </h1>
           <h3 class='bignamepost'><input type="text" placeholder="Post" class="post"></h3>
         </div>
       </header>
@@ -327,7 +352,7 @@
                   <option value="2021">2021</option>
                 </span>
                 </select>
-              </span> <input type="checkbox"  name="" id="" class="present-checkbox box no-print" onclick="present()">
+              </span> <input type="checkbox"  name="" id="" class="present-checkbox box no-print" onclick="present()" >
                  </span>
               <label for="present-checkbox" class="box no-print" style="color: rgba(0, 0, 0, 0.582);">Present</label>
            
@@ -357,6 +382,306 @@
     </div>
   </div>
   </div>
+
+  <div class="page" id="resume">
+    <header id="header">
+      <label for="filefeild" id="img-lable"> <img class="img" src="./profile.jpg" alt="" srcset="" id="img-f" /></label>
+      <input type="file" name="" id="filefeild" class="file">
+      <div class="name">
+        <h1 class='bigname' id="bigname">
+          <!-- <input type="text" class="bigname" placeholder="NAME" name="" id=""> -->
+          <div class="test bigname" placeholder="NAME" contenteditable="true"></div>
+        </h1>
+        <h3 class='bignamepost'><input type="text" placeholder="Post" class="post"></h3>
+      </div>
+    </header>
+    <div class="info">
+      <section class="first">
+        <div class="profile">
+          <h1 class="heading">Personal profile</h1>
+          <div class="underline"></div>
+          <div class="test" placeholder="About Yourself..." contenteditable="true"></div>
+        </div>
+        <div class="contact">
+          <h1 class="heading">contact</h1>
+          <div class="underline"></div>
+          <p id="addressp">
+            <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;&nbsp;
+            <textarea name="" class="address" placeholder="Address" id="addressC" cols="" rows="1"></textarea>
+          </p>
+          <p id='emailp'>
+            <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;
+            <input type="email" placeholder="E-mail" class="email" id="emailC" style="max-width: 267px;;" required />
+          </p>
+          <p id='numberp'>
+            <i class="fa fa-phone" aria-hidden="true"></i> &nbsp;&nbsp;
+            <input type="number" name="" placeholder="Ph. Number" class="number" id="numberC">
+          </p>
+          <p id='websitep' style="display: none;">
+            <i class="fa fa-globe" aria-hidden="true"></i> &nbsp;&nbsp;
+            <input type="text" name="" placeholder="Website" class="number" id="websiteC">
+          </p>
+          <p id='twitterp' style="display: none;">
+            <i class="fa fa-twitter" aria-hidden="true"></i> &nbsp;&nbsp;
+            <input type="text" name="" placeholder="Twitter" class="number" id="twitterC">
+          </p>
+          <p id='githubp' style="display: none;">
+            <i class="fa fa-github" aria-hidden="true"></i> &nbsp;&nbsp;
+            <input type="text" name="" placeholder="Github" class="number" id="githubC">
+          </p>
+          <p id='facebookp' style="display: none;">
+            <i class="fa fa-facebook" aria-hidden="true"></i> &nbsp;&nbsp;
+            <input type="text" name="" placeholder="Facebook" class="number" id="facebookC">
+          </p>
+          <p id='instagramp' style="display: none;">
+            <i class="fa fa-instagram" aria-hidden="true"></i> &nbsp;&nbsp;
+            <input type="text" name="" placeholder="Instagram" class="number" id="instagramC">
+          </p>
+
+
+          <p id="linkedinp" style="display: none;">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            &nbsp;&nbsp;
+
+            <input type="text" class="linkedin" placeholder="Linked in" name="" id=""></a>
+          </p>
+          
+        </div>
+        <h1 class="heading">Education</h1>
+        <div class="underline"></div>
+        <div class="eduction">
+          <div class="edcution-content">
+          <p class='edit'>
+            <i class="fa fa-institution" aria-hidden="true"></i>&nbsp;&nbsp;<input type="text"
+              placeholder="University" name="" class="collage" id="">
+          </p>
+          <p>
+            <i class="fa fa-mortar-board" aria-hidden="true"></i>&nbsp;&nbsp;<input type="text" class="collage"
+              placeholder="Degree" name="" id="">
+          </p>
+        </div>
+        </div>
+      </section>
+      <section class="second">
+        <div class="skill">
+          <h1 class="heading">Skills</h1>
+          <div class="underline"></div>
+
+          <ul id="skill-container" contenteditable="">
+            <li> <div class="test" placeholder="Skill" contenteditable="true"></div></li>
+
+          </ul>
+        </div>
+        <h1 class="heading">work experince</h1>
+        <div class="underline"></div>
+        <div class="exp-container">
+          <div contenteditable="true" class="experince" id="exp-cont">
+
+            <h2 class='test' contenteditable="true" placeholder="Compnay"> 
+              <div class="test" placeholder="Compnay" contenteditable="true" ></div>
+              <!-- <input type="text" placeholder="compnay" name="" class="compnay">  -->
+              <input type="text"
+                placeholder="post" name="" class="comp-post"></h2>
+<span id="month">
+            <select id='gMonth2'
+              style=" min-width: 22px; max-width: 30px; -webkit-appearance: none; color:rgba(0, 0, 0, 0.582) "
+              onchange="show_month()">
+              <option selected value=''>mm/</option>
+              <option value='1'>JAN.</option>
+              <option value='2'>FEB.</option>
+              <option value='3'>MAR.</option>
+              <option value='4'>APR.</option>
+              <option value='5'>MAY.</option>
+              <option value='6'>JUN.</option>
+              <option value='7'>JUL.</option>
+              <option value='8'>AUG.</option>
+              <option value='9'>SEP.</option>
+              <option value='10'>OCT.</option>
+              <option value='11'>NOV.</option>
+              <option value='12'>DEC.</option>
+            </select><span style=" color:rgba(0, 0, 0, 0.582)">,</span><select id="year" name="year"
+              style="-webkit-appearance: none; width: 28px !important; color:rgba(0, 0, 0, 0.582); ">
+              <option>yyyy</option>
+              <option value="1957">1957</option>
+              <option value="1958">1958</option>
+              <option value="1959">1959</option>
+              <option value="1960">1960</option>
+              <option value="1961">1961</option>
+              <option value="1962">1962</option>
+              <option value="1963">1963</option>
+              <option value="1964">1964</option>
+              <option value="1965">1965</option>
+              <option value="1966">1966</option>
+              <option value="1967">1967</option>
+              <option value="1968">1968</option>
+              <option value="1969">1969</option>
+              <option value="1970">1970</option>
+              <option value="1971">1971</option>
+              <option value="1972">1972</option>
+              <option value="1973">1973</option>
+              <option value="1974">1974</option>
+              <option value="1975">1975</option>
+              <option value="1976">1976</option>
+              <option value="1977">1977</option>
+              <option value="1978">1978</option>
+              <option value="1979">1979</option>
+              <option value="1980">1980</option>
+              <option value="1981">1981</option>
+              <option value="1982">1982</option>
+              <option value="1983">1983</option>
+              <option value="1984">1984</option>
+              <option value="1985">1985</option>
+              <option value="1986">1986</option>
+              <option value="1987">1987</option>
+              <option value="1988">1988</option>
+              <option value="1989">1989</option>
+              <option value="1990">1990</option>
+              <option value="1991">1991</option>
+              <option value="1992">1992</option>
+              <option value="1993">1993</option>
+              <option value="1994">1994</option>
+              <option value="1995">1995</option>
+              <option value="1996">1996</option>
+              <option value="1997">1997</option>
+              <option value="1998">1998</option>
+              <option value="1999">1999</option>
+              <option value="2000">2000</option>
+              <option value="2001">2001</option>
+              <option value="2002">2002</option>
+              <option value="2003">2003</option>
+              <option value="2004">2004</option>
+              <option value="2005">2005</option>
+              <option value="2006">2006</option>
+              <option value="2007">2007</option>
+              <option value="2008">2008</option>
+              <option value="2009">2009</option>
+              <option value="2010">2010</option>
+              <option value="2011">2011</option>
+              <option value="2012">2012</option>
+              <option value="2013">2013</option>
+              <option value="2014">2014</option>
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+            </select><span style=" color:rgba(0, 0, 0, 0.582)">- </span><span style="color:rgba(0, 0, 0, 0.582)"
+              class="present-span"><select id='gMonth2'
+                style=" min-width: 22px; max-width: 30px; -webkit-appearance: none; color:rgba(0, 0, 0, 0.582) ">
+                <option selected value=''>mm/</option>
+                <option value='1' style="width:22px">JAN.</option>
+                <option value='2'>FEB.</option>
+                <option value='3' style="width:30px">MAR.</option>
+                <option value='4'>APR.</option>
+                <option value='5'>MAY.</option>
+                <option value='6'>JUN.</option>
+                <option value='7'>JUL.</option>
+                <option value='8'>AUG.</option>
+                <option value='9'>SEP.</option>
+                <option value='10'>OCT.</option>
+                <option value='11'>NOV.</option>
+                <option value='12'>DEC.</option>
+              </select><span style=" color:rgba(0, 0, 0, 0.582)">,</span><select id="year" name="year"
+                style="-webkit-appearance: none; width: 28px !important; color:rgba(0, 0, 0, 0.582); ">
+                <option>yyyy</option>
+                <option value="1957">1957</option>
+                <option value="1958">1958</option>
+                <option value="1959">1959</option>
+                <option value="1960">1960</option>
+                <option value="1961">1961</option>
+                <option value="1962">1962</option>
+                <option value="1963">1963</option>
+                <option value="1964">1964</option>
+                <option value="1965">1965</option>
+                <option value="1966">1966</option>
+                <option value="1967">1967</option>
+                <option value="1968">1968</option>
+                <option value="1969">1969</option>
+                <option value="1970">1970</option>
+                <option value="1971">1971</option>
+                <option value="1972">1972</option>
+                <option value="1973">1973</option>
+                <option value="1974">1974</option>
+                <option value="1975">1975</option>
+                <option value="1976">1976</option>
+                <option value="1977">1977</option>
+                <option value="1978">1978</option>
+                <option value="1979">1979</option>
+                <option value="1980">1980</option>
+                <option value="1981">1981</option>
+                <option value="1982">1982</option>
+                <option value="1983">1983</option>
+                <option value="1984">1984</option>
+                <option value="1985">1985</option>
+                <option value="1986">1986</option>
+                <option value="1987">1987</option>
+                <option value="1988">1988</option>
+                <option value="1989">1989</option>
+                <option value="1990">1990</option>
+                <option value="1991">1991</option>
+                <option value="1992">1992</option>
+                <option value="1993">1993</option>
+                <option value="1994">1994</option>
+                <option value="1995">1995</option>
+                <option value="1996">1996</option>
+                <option value="1997">1997</option>
+                <option value="1998">1998</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+              </span>
+              </select>
+            </span> <input type="checkbox"  name="" id="" class="present-checkbox box no-print" onclick="present()" >
+               </span>
+            <label for="present-checkbox" class="box no-print" style="color: rgba(0, 0, 0, 0.582);">Present</label>
+         
+            <ul id="skill-container"  >
+              <li> <div class="test" placeholder="Experince" contenteditable="true"></div></li>
+              
+            </ul>
+          </div>
+        </div>
+        <div class="project">
+        <h1 class="heading">Project</h1>
+        <div class="underline"></div>
+          <div  id="project-content">
+            <div class="test"  placeholder="Project" contenteditable="true"></div>
+       
+
+       
+            <ul class="exp-container" >
+              <li> <div class="test" placeholder="Project infomation" contenteditable="true"></div></li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </div>
+</div>
   <script src="./resume.js"></script>
 </body>
 

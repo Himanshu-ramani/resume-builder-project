@@ -319,12 +319,12 @@ button{
   display: none;
 }
 
- .present-checkbox{
+ /* .present-checkbox{
    position: relative;
    top: 3px;
    left: 3px;
    max-width: 90%;
- }
+ } */
 .add-company{
   display: none;
   padding: 3px 6px;

@@ -195,9 +195,9 @@ function present() {
     span.innerHTML = "Present";
   } else {
     html = document.getElementById("month");
-    span = event.target.previousElementSibling.previousElementSibling;
+    span = event.target.previousElementSibling.previousElementSibling.previousElementSibling;
     console.log(span);
-    // span.innerHTML=html
+    span.innerHTML=html
   }
 }
 ////////
@@ -211,17 +211,26 @@ btnPdf.addEventListener("click", function (e) {
 
   // window.print();
   // page.style.margin = "30px auto";
-  var element = document.getElementById('page');
+  var element = document.getElementById('resume');
 var opt = {
-  margin:       1,
+  margin:       [-8,-2,0,0],
   filename:     'myfile.pdf',
-  image:        { type: 'jpeg', quality: 0.98 },
-  html2canvas:  { scale: 2 },
-  jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+  pagebreak:{mode: ['css', 'legacy']},
+  image:        { type: 'jpg', quality: 1 },
+  enableLinks:true,
+  html2canvas: {
+    dpi: 300,
+    letterRendering: true,
+    useCORS: true,
+   scale: 4 
+    },
+  jsPDF:        {  format: 'a4', orientation: 'portrait' }
 };
 
 // New Promise-based usage:
+// element.style.margin = 0;
 html2pdf().set(opt).from(element).save();
+element.style.margin = "30px auto";
 });
 
 //////////////////////////////////////////
