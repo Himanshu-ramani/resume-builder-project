@@ -185,10 +185,23 @@ const page = document.getElementById("form")
   const btnPdf = document.getElementById("pdf-btn");
   btnPdf.addEventListener("click", function (e) {
     e.preventDefault();
-  
-  page.style.margin = 0
-  
-  window.print()
-  page.style.margin = "30px auto"
-  
+    var element = document.getElementById('page');
+var opt = {
+  margin:       [-8,-2,0,0],
+  filename:     'myfile.pdf',
+  pagebreak:{mode: ['css', 'legacy']},
+  image:        { type: 'jpg', quality: 1 },
+  enableLinks:true,
+  html2canvas: {
+    dpi: 300,
+    letterRendering: true,
+    useCORS: true,
+   scale: 4 
+    },
+  jsPDF:        {  format: 'a4', orientation: 'portrait' }
+};
+
+html2pdf().set(opt).from(element).save();
+element.style.margin = "30px auto";
+
   });

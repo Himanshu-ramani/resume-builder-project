@@ -208,6 +208,10 @@ h2 {
 }
 textarea {
   resize: none;
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+  color:  rgba(0, 0, 0, 0.582);;
 }
 .about {
   color: rgba(0, 0, 0, 0.815);
@@ -243,7 +247,7 @@ textarea {
   font-weight: 500;
 }
 .comp-post {
-  width: 50px;
+  /* width: 50px; */
   color: rgba(0, 0, 0, 0.582);
   font-size: 1.1rem;
 }
@@ -347,7 +351,9 @@ button{
 .sub-li , .add-li{
   display: none;
 }
-
+.project{
+  width: 450px;
+}
 
 .experince{
 

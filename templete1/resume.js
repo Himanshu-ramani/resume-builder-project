@@ -195,7 +195,7 @@ function present() {
     span.innerHTML = "Present";
   } else {
     html = document.getElementById("month");
-    span = event.target.previousElementSibling.previousElementSibling.previousElementSibling;
+    span = event.target.previousElementSibling.previousElementSibling 
     console.log(span);
     span.innerHTML=html
   }
@@ -211,7 +211,7 @@ btnPdf.addEventListener("click", function (e) {
 
   // window.print();
   // page.style.margin = "30px auto";
-  var element = document.getElementById('resume');
+  var element = document.getElementById('page');
 var opt = {
   margin:       [-8,-2,0,0],
   filename:     'myfile.pdf',
@@ -227,8 +227,6 @@ var opt = {
   jsPDF:        {  format: 'a4', orientation: 'portrait' }
 };
 
-// New Promise-based usage:
-// element.style.margin = 0;
 html2pdf().set(opt).from(element).save();
 element.style.margin = "30px auto";
 });
