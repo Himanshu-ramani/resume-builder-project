@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width = device-width" />
+    <link rel="stylesheet" href="./temeplete3.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="full-page">
+      <div class="navigation no-print">
+        <h1>MY RESUME</h1>
+        <div class="pdf-container">
+  
+          <a href="#" id="pdf-btn" rel="noopener noreferrer">Save PDF</a>
+        </div>
+        <div class="underline-nav"></div>
+        <h2>Templete Setting</h2>
+        <div class="items">
+         
+          <!-- <p>Horizotal margin</p>
+          <div class="button-container"><button>1</button> <button>2</button> <button>3</button></div> -->
+      
+         
+          <p>Font style</p>
+          <div class="button-container"><button onclick="setDefaultFont()">1</button> <button onclick="setFontFirst()">2</button> <button onclick="setFontSecond()">3</button></div>
+          <p>Image</p>
+          <div class="button-container"><button onclick="showImg()">Show</button> <button onclick="hideImg()">Hide</button></div>
+          <p>Layout</p>
+          <div class="button-container"><button>1</button> <button>2</button></div>
+          <p>Tittle case</p>
+          <div class="button-container"><button onclick="setTitleDefault()">Default</button> <button onclick="setTitleUpperCase()">UpperCase</button></div>
+        </div>
+  
+        <div class="add-content">
+          <p>Work Experince</p>
+          <div class="button-container"> <button onclick="addExperince()">+</button></div>
+          <p>Education</p>
+          <div class="button-container"> <button onclick="addEduction()">+</button>  </div>
+
+        </div>
+        <h5>To Remove   just backspace</h5>
+      </div>
+    <div class="form" id="form">
+      <header>
+        <label for="filefeild" id="img-label">
+          <img class="img" src="./profile.jpg" alt="" srcset="" id="img-f"
+        /></label>
+        <input type="file" name="" id="filefeild" class="file" />
+        <p class="">
+          <div class="test bigname" id="name-form" placeholder="Name" contenteditable="true"></div>
+
+        </p>
+      </header>
+      <div class="info">
+        <section class="one">
+          <br />
+          <br />
+          <p class="heading">CONTACT</p>
+          <div class="contact">
+            <p class="address">
+              <label for="address">Address</label>
+              <br />
+              <textarea
+                name="address"
+                id="address"
+                cols="30"
+                rows="1"
+                placeholder="Address"
+              ></textarea>
+            </p>
+            <p class="email">
+              <label for="eamil-form">E-mail</label>
+              <br />
+              <input type="text" name="" id="email-form" placeholder="Email" />
+            </p>
+            <p class="phone">
+              <label for="phone-form">Phone Number</label>
+              <input
+                type="number"
+                name=""
+                id="phone-form"
+                placeholder="Number"
+              />
+            </p>
+          </div>
+        </section>
+        <section class="two">
+          <div class="heading">SUMMARY</div>
+          <div class="summary">
+  
+            <div class="test" placeholder="Summary about yourself" contenteditable="true"></div>
+          </div>
+          <div class="heading">EXPERINCE</div>
+          &nbsp;
+          <div class="experince" id="exp-container-form" >
+            <div class="container" contenteditable="true">
+              <div class="test Company" placeholder="COMPANY" contenteditable="true"></div>
+          
+               <div class="test post" placeholder="Post" contenteditable="true"></div>
+               <div class="test" placeholder="Experince" contenteditable="true"></div>
+          
+            </div>
+          </div>
+          <div class="heading">EDUCATION</div>
+          &nbsp;
+          <div class="education">
+            <div class="eduContainer">
+
+              <input
+                type="text"
+                name=""
+                class="university"
+                id=""
+                placeholder="UNIVERSITY"
+              /><br />
+              <input type="text" placeholder="DEGREE" class="university" />
+              <br />
+              <br>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="underline" ></div>
+      <footer></footer>
+    </div>
+  </div>
+
+    <script src="./temeplete3.js"></script>
+  </body>
+</html>
