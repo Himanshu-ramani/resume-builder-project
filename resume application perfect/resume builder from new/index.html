@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="from">
+            <button onclick="pdfDownload()">Download</button>
+            <br> 
+            <label for="name">NAME</label>
+            <input type="text" name="" placeholder="Name" id="" onchange="setName()">
+
+            <section id="formContainer">
+                <form onsubmit="experinceSubmit()" id="experinceForm">
+            post <input type="text" name="" id="" onchange="post()"> <br>
+            company <input type="text" name="" id="" onchange="company()"><br>
+            date <input type="month" name="" id="" onchange="dateFirst()"><br>
+            to date <input type="month" name="" id="" onchange="dateTill()"><br>
+            experince <textarea name="" id="" cols="30" rows="1" onchange="experince()"></textarea><br>
+            <button type="submit">Add</button>
+        </form>
+        <button onclick="addExperince()">Add Experince</button>
+            </section>
+
+
+        </div>
+        <div class="page"  id='page'>
+            <div class="templete" id="templete">
+                <div class="first-section">
+                    <div class="image-container">
+                        <img src="./assets/placeholder.jpg" alt="" srcset="" class="img">
+                    </div>
+                    <section>
+                        <h4 class="heading">CONTACT</h4>
+                        <div class="contact-container">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i><p>address</p>
+                             <i class="fa fa-envelope" aria-hidden="true"></i><p>email</p>
+                             <i class="fa fa-phone" aria-hidden="true"></i><p>Phone</p>
+
+                        </div>
+                    </section>
+                    <section>
+                        <h4 class="heading">SKILLS</h4>
+                        <ul>
+                            <li>html</li>
+                            <li>CSS</li>
+                            <li>javascript</li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="second-section">
+                    <section class="name">
+                        <h1 id="bigname">NAME</h1>
+                        <div class="underline"></div>
+                        <h2>POST</h2>
+                    </section>
+                    <section>
+                        <h3>WORK EXPERIENCE</h3>
+                        <div class="experince-container">
+                            <div class="experince">
+                            <p class="experince-post">
+                                Project Manager
+                            </p>
+                            <p>Company</p><span>Oct.2017 - present</span>
+                            <ul>
+                                <li>conduct day to day project coordination, planning and implementation across five teams of 20+ desginer</li>
+                                <li>creeate function techical application documents</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>EDUCATION</h3>
+                        <div class="experince-container">
+                            <div class="experince">
+                            <p class="experince-post">
+                                Project Manager
+                            </p>
+                            <p>Company</p><span>Oct.2017 - present</span>
+                            <ul>
+                                <li>conduct day to day project coordination, planning and implementation across five teams of 20+ desginer</li>
+                                <li>creeate function techical application documents</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
